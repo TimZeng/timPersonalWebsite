@@ -29,6 +29,11 @@ body {
   width: 100vw;
 }
 
+.content {
+  margin-top: 100px;
+  position: relative;
+}
+
 .clearfix {zoom: 1;}
 .clearfix:after {
   content: '.';
@@ -231,11 +236,11 @@ header {
 }
 
 .logo {
-  height: 80px;
-  width: 80px;
-  border-radius: 40px;
+  height: 66px;
+  width: 66px;
+  border-radius: 33px;
   float: left;
-  margin-top: 20px;
+  margin: 5px 0;
 }
 
 .logo-black {
@@ -249,10 +254,9 @@ header {
 /* Main Nav */
 
 .main-nav {
-  float: right;
   list-style: none; /*remove ul default format*/
   margin-top: 38px;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .main-nav li {
@@ -293,7 +297,7 @@ header {
 /* Sticky Nav */
 
 .sticky {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -310,8 +314,7 @@ header {
   padding: 15px 0; /*add spacing between text and border-bottom*/
 }
 
-.sticky .logo { display: none; }
-.sticky .logo-black { display: block; }
+/*.sticky .logo { display: none; }*/
 
 
  -----------------------------------------------------------
@@ -583,6 +586,7 @@ footer {
 }
 
 .social-links {
+  margin-top: 14px;
   list-style: none;
   float: right;
 }
@@ -618,19 +622,19 @@ footer {
   font-size: 140%;
 }
 
-.ion-social-facebook,
-.ion-social-twitter,
+.ion-social-linkedin,
+.ion-social-github,
 .ion-social-googleplus,
 .ion-social-instagram {
   transition: color 0.2s;
 }
 
-.ion-social-facebook:hover {
-  color: #3b5998;
+.ion-social-linkedin:hover {
+  color: #0077B5;
 }
 
-.ion-social-twitter:hover {
-  color: #00aced;
+.ion-social-github:hover {
+  color: #24292e;
 }
 
 .ion-social-googleplus:hover {
