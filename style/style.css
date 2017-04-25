@@ -216,7 +216,7 @@ header {
   /*linear-gradient is moving from one color to another*/
   background-size: cover; /*to cover the entire space*/
   background-position: center; /*center background image*/
-  height: 95vh; /*make header's height the same as the broswer view port*/
+  height: 200px; /*make header's height the same as the broswer view port*/
   background-attachment: fixed; /*fix background image when scroll*/
 }
 
@@ -314,7 +314,7 @@ header {
 .sticky .logo-black { display: block; }
 
 
-/* ----------------------------------------------------------- */
+ -----------------------------------------------------------
 /* Features */
 /* ----------------------------------------------------------- */
 
