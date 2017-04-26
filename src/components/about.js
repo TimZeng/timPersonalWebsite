@@ -80,6 +80,15 @@ const About = () => (
           </li>
         </ul>
 
+        <h3>Education</h3>
+        <p className='long-copy'>
+          <img src='../../Assets/img/hack-reactor.png' className='tech-icon' alt="USC" />
+          <span>Hack Reactor - Advanced Software Engineering Immersive Program</span>
+        </p>
+        <p className='long-copy'>
+          <img src='../../Assets/img/usc.png' className='tech-icon' alt="USC" />
+          <span>University of Southern California - Enterprise Information System</span>
+        </p>
       </div>
 
     </div>
