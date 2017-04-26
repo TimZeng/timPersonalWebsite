@@ -57,7 +57,7 @@ body {
 }
 
 section {
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
 .box {
@@ -382,10 +382,6 @@ header {
   margin-bottom: 35px;
 }
 
-.section-about {
-  border-right: 1px solid red;
-}
-
 .link-icon {
   font-size: 120%;
 }
@@ -427,11 +423,11 @@ ul.bullet {
 }
 
 /* ----------------------------------------------------------- */
-/* Meals */
+/* Works */
 /* ----------------------------------------------------------- */
 
-.section-meals {
-  padding: 0;
+.section-work {
+  background-color: #ededed;
 }
 
 .meals-showcase {
