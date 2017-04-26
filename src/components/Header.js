@@ -5,8 +5,7 @@ const Header = () => (
 
     <div className="hero-text-box">
       <h1>Software Engineer &<br />Front End Web Developer</h1>
-      <p>&nbsp; &nbsp; &nbsp; &nbsp;@ San Francisco Bay Area</p>
-      <p>&nbsp; &nbsp; &nbsp; &nbsp;{Date(Date.UTC(2012, 11, 12, 3, 0, 0))}</p>
+      <p>&nbsp; &nbsp; &nbsp; &nbsp;<i className='ion-location' /> San Francisco Bay Area</p>
     </div>
 
   </header>

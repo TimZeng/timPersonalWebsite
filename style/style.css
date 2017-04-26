@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html,
 body {
   background-color: #fff;
@@ -30,8 +34,8 @@ body {
 }
 
 .content {
-  margin-top: 85px;
-  position: relative;
+  margin-top: 77px;
+  /*position: relative;*/
 }
 
 .clearfix {zoom: 1;}
@@ -53,7 +57,7 @@ body {
 }
 
 section {
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 .box {
@@ -90,6 +94,22 @@ h2 {
 h3 {
   font-size: 110%;
   margin-bottom: 15px;
+  text-align: center;
+}
+
+h6 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 15%;
+}
+
+h6:after {
+  display: block;
+  height: 1px;
+  background-color: #e67e22;
+  content: " "; /*this is required for this :after*/
+  width: 80px;
+  margin: 5px 0 10px 0;
 }
 
 h2:after { /*this is used to add content after h2 elements from css*/
@@ -104,11 +124,12 @@ h2:after { /*this is used to add content after h2 elements from css*/
 
 /* ----- Paragraphs ----- */
 
-.long-copy {
+.long-copy,
+.brief-description {
   line-height: 145%; /*line-height should be between 120 to 145% */
   width: 70%;
   margin-left: 15%;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .box p {
@@ -138,6 +159,7 @@ h2:after { /*this is used to add content after h2 elements from css*/
   line-height: 120%;
   vertical-align: middle;
 }
+
 
 /* ----- Links ----- */
 
@@ -269,7 +291,7 @@ input[type=submit]:active {
 /* Sticky Nav */
 
 .sticky {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -323,32 +345,85 @@ input[type=submit]:active {
 /* ----------------------------------------------------------- */
 
 header {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.7));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.7));
 
   /*2 arguments for background-image works as 2 images on top of one another*/
   /*linear-gradient is moving from one color to another*/
   background-size: cover; /*to cover the entire space*/
   background-position: center; /*center background image*/
-  height: 45vh; /*make header's height the same as the broswer view port*/
+  height: 35vh; /*make header's height the same as the broswer view port*/
   background-attachment: fixed; /*fix background image when scroll*/
+  position: relative;
 }
 
 .hero-text-box {
   position: absolute; /*position absolute so we can absolute center the text*/
   width: 1140;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); /*transform to minus 50% of width and 50% of height of the element so the element will be perfectly centered*/
 }
 
+.hero-text-box p {
+  font-size: 150%;
+}
+
+.hero-text-box p i {
+  color: #e67e22;
+}
+
 /* -----------------------------------------------------------* /
-/* Features */
+/* About */
 /* ----------------------------------------------------------- */
 
-.section-features .long-copy {
+.section-about .long-copy {
   margin-bottom: 35px;
+}
+
+.section-about {
+  border-right: 1px solid red;
+}
+
+.link-icon {
+  font-size: 120%;
+}
+
+.brief-description {
+  color: #b2b2b2;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.bullet {
+  margin-left: 16%;
+  list-style: none;
+  width: 69%;
+}
+
+.bullet li::before {
+  content: "• ";
+  color: #e67e22;
+}
+
+.bullet li:last-child:before {
+  content: "  ";
+}
+
+.bullet li:last-child {
+  margin-top: 20px;
+}
+
+ul.bullet {
+  margin-bottom: 80px;
+}
+
+.tech-icon {
+  display: inline-block;
+  width: auto;
+  height: 50px;
+  margin-right: 20px;
 }
 
 /* ----------------------------------------------------------- */
