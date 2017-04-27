@@ -259,13 +259,20 @@ input[type=submit]:active*/ {
 
 .main-nav {
   list-style: none; /*remove ul default format*/
-  margin-top: 38px;
+  /*margin-top: 38px;*/
   margin: 0 auto;
+
+  margin-top: 11px;
 }
 
 .main-nav li {
   display: inline-block; /*li tag is block element by default, so change to inline-block*/
-  margin-left: 40px;
+  /*margin-left: 40px;*/
+
+
+  font-size: 150%;
+  text-transform: uppercase;
+  font-weight: 480;
 }
 
 .main-nav li a {
@@ -310,7 +317,9 @@ input[type=submit]:active*/ {
   z-index: 9999;
 }
 
-.sticky .main-nav { margin-top: 18px; }
+/*.sticky .main-nav {
+  margin-top: 18px;
+}*/
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
@@ -334,6 +343,7 @@ input[type=submit]:active*/ {
   width: 70%;
   margin: 0 auto;
   padding: 8px 0;
+  color: #fff;
 }
 
 #contact:hover,
@@ -343,8 +353,9 @@ input[type=submit]:active*/ {
   border-color: var(--dark-orange);
 }
 
-.social-links {
+nav.social-links {
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .social-links li a:link,
@@ -462,7 +473,7 @@ ul.bullet {
 }
 
 .section-about a:link,
-.section-about a:visited{
+.section-about a:visited {
   color: var(--font-color);
   border: none;
   transition: color 0.2s;
@@ -471,6 +482,15 @@ ul.bullet {
 .section-about a:hover,
 .section-about a:active {
   color: var(--blue);
+}
+
+.section-about h3 a:last-child {
+  color: #fff;
+}
+
+.section-about h3 a:last-child:hover,
+.section-about h3 a:last-child:active {
+  color: #fff;
 }
 
 /* ----------------------------------------------------------- */
@@ -727,7 +747,6 @@ footer {
   /*padding: 25px;*/
   font-size: 80%;
   height: 70px;
-  margin-top: -70px;
 }
 
 
@@ -741,8 +760,12 @@ footer {
   margin-top: 14px;
   list-style: none;
   float: right;
+}
+
+footer .social-links {
   margin-left: auto;
 }
+
 .footer-nav li,
 .social-links li {
   display: inline-block;

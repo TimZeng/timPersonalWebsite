@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 
-// import Header from './Header';
-// import Features from './Features';
 import Nav from './nav';
 import Footer from './footer';
 

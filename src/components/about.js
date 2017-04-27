@@ -93,7 +93,9 @@ const About = () => (
           <span>University of Southern California - Enterprise Information System</span>
         </p>
 
-        <h3 id='contact-2'>Put me to work</h3>
+        <h3 id='contact-2'>
+          <a href="mailto:zengtiantian1122@gmail.com">let's get in touch</a>
+        </h3>
       </div>
 
     </div>

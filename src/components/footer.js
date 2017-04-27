@@ -10,7 +10,7 @@ const Footer = () => (
       <ul className="social-links">
 
         <li>
-          <a href="mailto:zengtiantian1122@gmail.com" target='_blank'>
+          <a href="mailto:zengtiantian1122@gmail.com">
             <i className="ion-email" />
           </a>
         </li>
@@ -39,9 +39,6 @@ const Footer = () => (
           </a>
         </li>
       </ul>
-    </div>
-
-    <div className="row">
     </div>
   </footer>
 );
