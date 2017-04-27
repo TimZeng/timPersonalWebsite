@@ -77,6 +77,9 @@ const About = () => (
           <li>
             <img src='../../Assets/img/angularjs.png' className='tech-icon' alt='AngularJS' />
             <img src='../../Assets/img/angular-ui-router.png' className='tech-icon' alt='Angular UI Router' />
+            <img src='../../Assets/img/SQLite.png' className='tech-icon' alt='SQLite' />
+            <img src='../../Assets/img/bookshelfJS.png' className='tech-icon' alt='BookshelfJS' />
+            <img src='../../Assets/img/bower.png' className='tech-icon' alt='Bower' />
           </li>
         </ul>
 
@@ -89,6 +92,8 @@ const About = () => (
           <img src='../../Assets/img/usc.png' className='tech-icon' alt="USC" />
           <span>University of Southern California - Enterprise Information System</span>
         </p>
+
+        <h3 id='contact-2'>Put me to work</h3>
       </div>
 
     </div>

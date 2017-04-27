@@ -20,12 +20,20 @@ class Nav extends Component {
             <li onClick={() => this.scrollToAbout()}><a>About</a></li>
             <li onClick={() => this.scrollToWork()}><a>Works</a></li>
             <li onClick={() => this.props.redirect('learnings')}><a>Learnings</a></li>
-            <li><a>Contact</a></li>
+            <li><a id='contact'>Contact</a></li>
           </ul>
 
             <ul className="social-links">
-              <li><a href="https://github.com/TimZeng" target='_blank'><i className="ion-social-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/tim-zeng-5ab68549/" target='_blank'><i className="ion-social-linkedin"></i></a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/tim-zeng-5ab68549/" target='_blank'>
+                  <i className="ion-social-linkedin" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/TimZeng" target='_blank'>
+                  <i className="ion-social-github" />
+                </a>
+              </li>
             </ul>
         </div>
       </nav>

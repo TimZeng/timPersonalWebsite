@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router';
 // import Header from './Header';
 // import Features from './Features';
 import Nav from './nav';
+import Footer from './footer';
 
 export default class App extends Component {
   redirect(pageTo) {
@@ -20,6 +21,7 @@ export default class App extends Component {
             redirect: this.redirect,
           })}
         </div>
+        <Footer />
       </div>
     );
   }
