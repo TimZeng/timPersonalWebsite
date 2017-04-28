@@ -400,7 +400,7 @@ header {
   /*2 arguments for background-image works as 2 images on top of one another*/
   /*linear-gradient is moving from one color to another*/
   background-size: cover; /*to cover the entire space*/
-  background-position: center; /*center background image*/
+  /*background-position: center;*/ /*center background image*/
   min-height: 220px;
   height: 35vh; /*make header's height the same as the broswer view port*/
   background-attachment: fixed; /*fix background image when scroll*/
