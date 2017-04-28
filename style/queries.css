@@ -39,6 +39,10 @@
   h2 { font-size: 100%; }
   h3 { font-size: 80%; }
 
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/img/header-background-small.jpg');
+  }
+
   .hero-text-box { left: 50%; }
 
   .hero-text-box p { font-size: 100%; }
