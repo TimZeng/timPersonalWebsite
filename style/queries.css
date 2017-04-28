@@ -54,7 +54,7 @@
   h6 { font-size: 70%; }
 
   header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/img/header-background-small.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/img/header-background-tiny.jpg');
   }
 
   .bullet li,
