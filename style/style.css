@@ -409,9 +409,9 @@ header {
 
 .hero-text-box {
   position: absolute; /*position absolute so we can absolute center the text*/
-  width: 1140;
+  width: 70%;
   top: 60%;
-  left: 50%;
+  left: 60%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); /*transform to minus 50% of width and 50% of height of the element so the element will be perfectly centered*/

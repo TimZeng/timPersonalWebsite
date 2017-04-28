@@ -32,15 +32,40 @@
   h2 { font-size: 120%; }
   h3 { font-size: 100%; }
 
-  .hero-text-box p { font-size: 120%; }
+}
 
-  .bullet,
-  .long-copy,
+@media only screen and (max-width: 660px) {
+  h1 { font-size: 120%; }
+  h2 { font-size: 100%; }
+  h3 { font-size: 80%; }
+
+  .hero-text-box { left: 50%; }
+
+  .hero-text-box p { font-size: 100%; }
+
+}
+
+@media only screen and (max-width: 420px) {
+  h1 { font-size: 110%; }
+  h2 { font-size: 90%; }
+  h3 { font-size: 70%; }
+  h6 { font-size: 70%; }
+
+  .bullet li,
   .brief-description {
-    width: 86%;
-    margin-left: 7%;
+    font-size: 65%;
   }
 
-  h6 { margin: 0 7%; }
+  .tech-icon {
+    height: 30px;
+  }
+
+  ul.bullet {
+    margin-bottom: 60px;
+  }
+
+  p.long-copy {
+    font-size: 65%;
+  }
 
 }
