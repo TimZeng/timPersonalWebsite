@@ -35,7 +35,7 @@
 }
 
 @media only screen and (max-width: 660px) {
-  h1 { font-size: 210%; }
+  h1 { font-size: 110%; }
   h2 { font-size: 100%; }
   h3 { font-size: 80%; }
 
@@ -45,8 +45,8 @@
 
 }
 
-@media only screen and (max-width: 420px) {
-  h1 { font-size: 110%; }
+@media only screen and (max-width: 410px) {
+  h1 { font-size: 100%; }
   h2 { font-size: 90%; }
   h3 { font-size: 70%; }
   h6 { font-size: 70%; }
