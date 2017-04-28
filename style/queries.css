@@ -46,26 +46,25 @@
 }
 
 @media only screen and (max-width: 420px) {
+
+
   h1 { font-size: 100%; }
   h2 { font-size: 90%; }
   h3 { font-size: 70%; }
   h6 { font-size: 70%; }
 
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/img/header-background-small.jpg');
+  }
+
   .bullet li,
-  .brief-description {
-    font-size: 65%;
-  }
-
-  .tech-icon {
-    height: 30px;
-  }
-
-  ul.bullet {
-    margin-bottom: 60px;
-  }
-
+  .brief-description,
   p.long-copy {
-    font-size: 65%;
+    font-size: 70%;
   }
+
+  .tech-icon { height: 30px; }
+
+  ul.bullet { margin-bottom: 60px; }
 
 }
