@@ -401,6 +401,7 @@ header {
   /*linear-gradient is moving from one color to another*/
   background-size: cover; /*to cover the entire space*/
   background-position: center; /*center background image*/
+  min-height: 220px;
   height: 35vh; /*make header's height the same as the broswer view port*/
   background-attachment: fixed; /*fix background image when scroll*/
   position: relative;
@@ -443,9 +444,13 @@ header {
 }
 
 .bullet {
-  margin-left: 16%;
+  margin-left: 15%;
   list-style: none;
-  width: 69%;
+  width: 70%;
+}
+
+.bullet li {
+  margin-bottom: 10px;
 }
 
 .bullet li::before {
@@ -459,10 +464,11 @@ header {
 
 .bullet li:last-child {
   margin-top: 20px;
+  padding-bottom: 10px;
 }
 
 ul.bullet {
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 .tech-icon {
@@ -796,6 +802,7 @@ footer .social-links {
 
 footer span {
   margin-top: 20px;
+  margin-left: 20px;
   color: var(--footer-text);
   text-align: center;
   font-size: 90%;

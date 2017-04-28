@@ -19,10 +19,18 @@ const About = () => (
           Web-based real-time multiplayer Minesweeper game
         </p>
         <ul className='bullet'>
-          <li>Utilized <strong>Redux</strong> to manage client side game states and designed <strong>custom middleware</strong> for server communications</li>
-          <li>Utilized <strong>Websocket</strong> to synchronize changes of game states resulted from real-time user interactions</li>
-          <li>Deployed application services through <strong>Docker containers</strong> and leveraged <strong>AWS ECS clusters</strong> and <strong>EC2 load balancers</strong> to enhance performance and allow potential scaling</li>
-          <li>Created service-oriented architecture and micro-services using Docker containers and networking links</li>
+          <li>
+            Utilized <strong>Redux</strong> to manage client side game states and designed <strong>custom middleware</strong> for server communications
+          </li>
+          <li>
+            Utilized <strong>Websocket</strong> to synchronize changes of game states resulted from real-time user interactions
+          </li>
+          <li>
+            Deployed application services through <strong>Docker containers</strong> and leveraged <strong>AWS ECS clusters</strong> and <strong>EC2 load balancers</strong> to enhance performance and allow potential scaling
+          </li>
+          <li>
+            Created service-oriented architecture and micro-services using Docker containers and networking links
+          </li>
           <li>
             <img src='../../Assets/img/react-hexagon.png' className='tech-icon' alt='ReactJS' />
             <img src='../../Assets/img/redux.png' className='tech-icon' alt='Redux' />
