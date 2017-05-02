@@ -81,7 +81,6 @@ h1,
 h2,
 h3 {
   font-weight: 300; /*decrease font weight, h1 is usually bold*/
-  text-transform: uppercase; /*make all letters upper case*/
   letter-spacing: 1px;
 }
 
@@ -95,6 +94,7 @@ h1 {
 }
 
 h2 {
+  text-transform: uppercase; /*make all letters upper case*/
   font-size: 180%;
   word-spacing: 3px;
   text-align: center;
@@ -103,6 +103,7 @@ h2 {
 }
 
 h3 {
+  text-transform: uppercase;
   font-size: 110%;
   margin-bottom: 15px;
   text-align: center;
@@ -201,46 +202,24 @@ a:active {
   transition: background-color 0.2s, border 0.2s, color 0.2s; /*this is a CSS3 feature, specify attributes for transition and the duration*/
 }
 
-/*there are 4 states of a tag:
- *link: the normal state;
- *hover: when hovered;
- *active: being clicked;
- *visited: visited;
- */
+a.btn-full {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  padding: 5px 15px;
+  margin: 25px 8%;
 
-.btn-full:link,
-.btn-full:visited,
-/*input[type=submit]*/ {
   background-color: var(--orange);
   border: 1px solid var(--orange);
   color: #fff;
-  margin-right: 15px;
 }
 
-.btn-ghost:link,
-.btn-ghost:visited {
-  /*border: 1px solid var(--orange);
-  color: var(--orange);*/
-}
-
-.button:hover,
-.button:active,
-/*input[type=submit]:hover,
-input[type=submit]:active*/ {
-  background-color: var(--dark-orange);
-}
-
-.btn-full:hover,
-.btn-full:active {
+a.btn-full:hover {
   background-color: var(--dark-orange);
   border: 1px solid var(--dark-orange);
+  cursor: pointer;
   color: #fff;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-/*  border: 1px solid var(--dark-orange);
-  color: #fff;*/
 }
 
 /* ----------------------------------------------------------- */
@@ -274,6 +253,10 @@ input[type=submit]:active*/ {
   text-transform: uppercase;
   font-weight: 480;
 }
+
+/*.main-nav li:first-child {
+  margin-left: 0;
+}*/
 
 .main-nav li a {
   text-decoration: none;
@@ -314,7 +297,7 @@ input[type=submit]:active*/ {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 2px #efefef;
-  z-index: 9999;
+  z-index: 10;
 }
 
 /*.sticky .main-nav {
@@ -401,15 +384,15 @@ header {
   /*linear-gradient is moving from one color to another*/
   background-size: cover; /*to cover the entire space*/
   /*background-position: center;*/ /*center background image*/
-  min-height: 220px;
-  height: 35vh; /*make header's height the same as the broswer view port*/
+  min-height: 400px;
+  height: 60vh; /*make header's height the same as the broswer view port*/
   background-attachment: fixed; /*fix background image when scroll*/
   position: relative;
 }
 
 .hero-text-box {
   position: absolute; /*position absolute so we can absolute center the text*/
-  width: 70%;
+  width: 80%;
   top: 60%;
   left: 60%;
   -webkit-transform: translate(-50%, -50%);
@@ -507,218 +490,26 @@ ul.bullet {
   background-color: #ededed;
 }
 
-.meals-showcase {
-  list-style: none;
-  width: 100%;
-}
-
-.meals-showcase li {
-  display: block;
-  float: left;
-  width: 25%;
-}
-
-.meal-photo {
-  width: 100%;
-  margin: 0;
-  overflow: hidden; /*images are larger than the meal-photo container, so hide the overflow*/
-  background-color: #000; /*give black background with opacity 0.6 to make images darker*/
-}
-
-.meal-photo img {
-  opacity: 0.6;
-  width: 100%; /*make sure images are the same size as container*/
-  height: auto;
-  -webkit-transform: scale(1.15);
-      -ms-transform: scale(1.15);
-          transform: scale(1.15); /*scale images*/
-  transition: opacity 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /*create animation*/
-}
-
-.meal-photo img:hover {
-  -webkit-transform: scale(1.03);
-      -ms-transform: scale(1.03);
-          transform: scale(1.03); /*zoom out images when hover*/
-  opacity: 1;
-}
-
-/* ----------------------------------------------------------- */
-/* How It Works */
-/* ----------------------------------------------------------- */
-
-.section-steps {
-  background-color: #f4f4f4;
-}
-
-.steps-box:first-child {
-  text-align: right; /*text-align works for any inline and inline-block elements*/
-  padding-right: 3%;
-  margin-top: 30px;
-}
-
-.steps-box:last-child {
-  padding-left: 3%;
-  margin-top: 70px;
-}
-
-.app-screen {
-  width: 40%;
-  height: auto;
-}
-
-.works-step {
-  margin-bottom: 50px;
-}
-
-.works-step:last-of-type {
-  margin-bottom: 80px;
-}
-
-.works-step div {
-  color: var(--orange);
-  border: 2px solid var(--orange);
-  display: inline-block;
-  float: left;
-  border-radius: 50%;
-  height: 55px;
-  width: 55px;
-  text-align: center;
-  padding: 5px;
-  font-size: 150%;
-  margin-right: 25px;
-}
-
-.btn-app:link,
-.btn-app:visited {
-  border: 0;
-}
-
-.btn-app img {
-  height: 50px;
-  width: auto;
-  margin-right: 10px;
-}
-
-/* ----------------------------------------------------------- */
-/* Cities */
-/* ----------------------------------------------------------- */
-
-.box img {
-  width: 100%; /*same width as the container*/
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.city-feature {
-  margin-bottom: 5px;
-}
-
-/* ----------------------------------------------------------- */
-/* Cities */
-/* ----------------------------------------------------------- */
-
-.section-testimonials {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
-  background-size: cover;
-  color: #fff;
-  background-attachment: fixed;
-}
-
-blockquote:before {
-  content: "\201C";
-  font-size: 500%;
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-}
-
-blockquote {
-  padding: 2%;
-  font-style: italic;
-  line-height: 145%;
-  position: relative;
-  margin-top: 40px;
-}
-
-cite {
-  font-size: 90%;
-  margin-top: 25px;
-  display: block;
-}
-
-cite img {
-  height: 45px;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-/* ----------------------------------------------------------- */
-/* Plans */
-/* ----------------------------------------------------------- */
-
-.section-plans {
-  background-color: #f4f4f4;
-}
-
-.plan-box {
-  background-color: #fff;
-  border-radius: 5px;
-  width: 90%;
-  margin-left: 5%;
-  box-shadow: 0 2px 2px #efefef;
-}
-
-.plan-box div {
-  padding: 15px;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.plan-box div:first-child {
-  background-color: #fcfcfc;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.plan-box div:last-child {
-  text-align: center;
-  border: 0;
-}
-
-.plan-price {
-  font-size: 300%;
-  margin-bottom: 10px;
-  font-weight: 100;
-  color: var(--orange);
-}
-
-.plan-price span {
-  font-size: 35%;
-  font-weight: 300;
-}
-
-.plan-price-meal {
-  font-size: 80%;
-}
-
-.plan-box ul {
-  list-style: none;
-}
-
-.plan-box ul li {
-  padding: 5px 0;
-}
-
 /* ----------------------------------------------------------- */
 /* Contact */
 /* ----------------------------------------------------------- */
 
+.section-contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
 .contact-form {
+  position: relative;
+  background-color: #fff;
   width: 60%;
-  margin: 0 auto;
+  height: 50%;
+  margin: 25vh auto;
 }
 
 input[type=text],
@@ -755,13 +546,6 @@ footer {
   height: 70px;
 }
 
-
-
-/*.footer-nav {
-  list-style: none;
-  float: left;
-}*/
-
 .social-links {
   margin-top: 14px;
   list-style: none;
@@ -778,13 +562,6 @@ footer .social-links {
   margin-right: 20px;
 }
 
-/*
-.footer-nav li:last-child,
-.social-links li:last-child {
-  margin-right: 0;
-}
-*/
-
 .social-links li a:link,
 .social-links li a:visited {
   text-decoration: none;
@@ -792,13 +569,6 @@ footer .social-links {
   color: var(--footer-text);
   transition: color 0.2s;
 }
-/*
-.footer-nav li a:hover,
-.footer-nav li a:active {
-  color: #ddd;
-}*/
-
-
 
 footer span {
   margin-top: 20px;

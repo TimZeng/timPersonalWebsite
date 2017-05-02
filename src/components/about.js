@@ -4,9 +4,12 @@ const About = () => (
   <section className="section-about js--section--about" id="about">
 
     <div className="row">
-      <h2>About</h2>
+      <h2>my story</h2>
       <p className="long-copy">
-        A detail-oriented person focusing on front-end architecture and modular design systems
+        I was building data tools and helping an online marketplace and hospitality service company, a transportation network company, an online ticket selling platform company, and more . . .
+      </p>
+      <p className="long-copy">
+        Now I am a <strong>Software Engineer</strong> focusing on front-end architecture and modular design systems
       </p>
     </div>
 

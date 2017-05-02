@@ -3,6 +3,7 @@ import { browserHistory } from 'react-router';
 
 import Nav from './nav';
 import Footer from './footer';
+import Contact from './contact';
 
 export default class App extends Component {
   redirect(pageTo) {
@@ -20,7 +21,9 @@ export default class App extends Component {
           })}
         </div>
         <Footer />
+
       </div>
     );
   }
 }
+        // <Contact />
