@@ -110,6 +110,7 @@ h2 {
 h3 {
   text-transform: uppercase;
   font-size: 110%;
+  margin-top: 60px;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -117,7 +118,8 @@ h3 {
 h6 {
   font-weight: 300;
   letter-spacing: 1px;
-  margin: 0 15%;
+  padding: 5px auto;
+  text-align: center;
 }
 
 h6:after {
@@ -126,7 +128,7 @@ h6:after {
   background-color: var(--main-theme);
   content: " "; /*this is required for this :after*/
   width: 80px;
-  margin: 5px 0 10px 0;
+  margin: 5px auto;
 }
 
 h2:after { /*this is used to add content after h2 elements from css*/
@@ -380,6 +382,7 @@ nav.social-links {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/img/header-background.jpg');
+
   background-size: cover;
   min-height: 400px;
   height: 60vh;
@@ -421,15 +424,6 @@ header {
   padding: 1%;
   margin: 20px 0;
   font-size: 120%
-}
-
-.skill-card h6 {
-  padding: 5px auto;
-  text-align: center;
-}
-
-.skill-card h6:after {
-  margin: 5px auto;
 }
 
 .skill-card img {

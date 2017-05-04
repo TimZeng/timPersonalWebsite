@@ -59,9 +59,16 @@ const About = () => (
 
     <div className="row js--wp-1">
       <div>
-        <h3>Projects</h3>
+        <h3>Works</h3>
 
         <h6>Madsweepers <a href='http://www.madsweepers.com/' target='_blank'><i className='ion-link link-icon' /></a></h6>
+
+        <iframe
+          className="embed-responsive-item"
+          src='https://www.youtube.com/embed/Xs4z3ZtFDxg'
+          allowFullScreen
+        />
+
         <p className="brief-description">
           Web-based real-time multiplayer Minesweeper game
         </p>
