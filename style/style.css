@@ -3,13 +3,15 @@
 /* ----------------------------------------------------------- */
 
 :root {
-  --orange: #e67e22;
+  --main-theme: #E67E22;
   --dark-orange: #cf6d17;
+  --background: #E0E4CB;
   --blue: #228ae6;
   --font-color: #555;
   --footer-color: #878481;
   --footer-text: #e0e0e0;
   --description-grey: #b2b2b2;
+  --border-grey: #efefef;
 }
 
 /* ----------------------------------------------------------- */
@@ -45,7 +47,6 @@ body {
 
 .content {
   margin-top: 77px;
-  /*position: relative;*/
 }
 
 .clearfix {zoom: 1;}
@@ -68,11 +69,15 @@ body {
 
 section {
   padding: 50px 0;
-  min-height: 100%;
 }
 
 .box {
   padding: 1%;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* ----- Headings ----- */
@@ -118,7 +123,7 @@ h6 {
 h6:after {
   display: block;
   height: 1px;
-  background-color: var(--orange);
+  background-color: var(--main-theme);
   content: " "; /*this is required for this :after*/
   width: 80px;
   margin: 5px 0 10px 0;
@@ -127,7 +132,7 @@ h6:after {
 h2:after { /*this is used to add content after h2 elements from css*/
   display: block;
   height: 2px;
-  background-color: var(--orange);
+  background-color: var(--main-theme);
   content: " "; /*this is required for this :after*/
   width: 100px;
   margin: 0 auto; /*center the content*/
@@ -138,7 +143,7 @@ h2:after { /*this is used to add content after h2 elements from css*/
 
 .long-copy,
 .brief-description {
-  line-height: 145%; /*line-height should be between 120 to 145% */
+  line-height: 145%;
   width: 70%;
   margin-left: 15%;
   /*text-align: center;*/
@@ -154,7 +159,7 @@ h2:after { /*this is used to add content after h2 elements from css*/
 .icon-big {
   font-size: 300%;
   display: block;
-  color: var(--orange);
+  color: var(--main-theme);
   margin-bottom: 10px;
 }
 
@@ -162,7 +167,7 @@ h2:after { /*this is used to add content after h2 elements from css*/
   display: inline-block;
   width: 30px;
   text-align: center;
-  color: var(--orange);
+  color: var(--main-theme);
   font-size: 120%;
   margin-right: 10px;
 
@@ -177,10 +182,10 @@ h2:after { /*this is used to add content after h2 elements from css*/
 
 a:link,
 a:visited {
-  color: var(--orange);
+  color: var(--main-theme);
   text-decoration: none;
   padding-bottom: 1px;
-  border-bottom: 1px solid var(--orange);
+  border-bottom: 1px solid var(--main-theme);
   transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -210,8 +215,8 @@ a.btn-full {
   padding: 5px 15px;
   margin: 25px 8%;
 
-  background-color: var(--orange);
-  border: 1px solid var(--orange);
+  background-color: var(--main-theme);
+  border: 1px solid var(--main-theme);
   color: #fff;
 }
 
@@ -271,7 +276,7 @@ a.btn-full:hover {
 .main-nav li a:hover,
 .main-nav li a:active {
   cursor: pointer;
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 2px solid var(--main-theme);
 }
 
 /* Mobile Nav */
@@ -300,10 +305,6 @@ a.btn-full:hover {
   z-index: 10;
 }
 
-/*.sticky .main-nav {
-  margin-top: 18px;
-}*/
-
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
   color: var(--font-color);
@@ -315,7 +316,7 @@ a.btn-full:hover {
   border-radius: 3px;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
   color: #fff;
-  background-color: var(--orange);
+  background-color: var(--main-theme);
   padding-left: 8px;
   padding-right: 8px;
 
@@ -379,25 +380,21 @@ nav.social-links {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/img/header-background.jpg');
-
-  /*2 arguments for background-image works as 2 images on top of one another*/
-  /*linear-gradient is moving from one color to another*/
-  background-size: cover; /*to cover the entire space*/
-  /*background-position: center;*/ /*center background image*/
+  background-size: cover;
   min-height: 400px;
-  height: 60vh; /*make header's height the same as the broswer view port*/
-  background-attachment: fixed; /*fix background image when scroll*/
+  height: 60vh;
+  background-attachment: fixed;
   position: relative;
 }
 
 .hero-text-box {
-  position: absolute; /*position absolute so we can absolute center the text*/
+  position: absolute;
   width: 80%;
   top: 60%;
   left: 60%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /*transform to minus 50% of width and 50% of height of the element so the element will be perfectly centered*/
+          transform: translate(-50%, -50%);
 }
 
 .hero-text-box p {
@@ -405,16 +402,49 @@ header {
 }
 
 .hero-text-box p i {
-  color: var(--orange);
+  color: var(--main-theme);
 }
 
 /* -----------------------------------------------------------* /
 /* About */
 /* ----------------------------------------------------------- */
 
-.section-about .long-copy {
+.section-about {
   margin-bottom: 35px;
+  background-color: var(--border-grey);
 }
+
+.skill-card {
+  width: 100vw;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  padding: 1%;
+  margin: 20px 0;
+  font-size: 120%
+}
+
+.skill-card h6 {
+  padding: 5px auto;
+  text-align: center;
+}
+
+.skill-card h6:after {
+  margin: 5px auto;
+}
+
+.skill-card img {
+  width: 5%;
+  height: auto;
+  display: block;
+  margin: 25px auto;
+}
+
+ .skill-list {
+  width: 50%;
+  vertical-align: top;
+  padding-left: 18%;
+ }
+
 
 .link-icon {
   font-size: 120%;
@@ -427,31 +457,20 @@ header {
 }
 
 .bullet {
-  margin-left: 15%;
-  list-style: none;
-  width: 70%;
+  display: inline-block;
 }
 
 .bullet li {
-  margin-bottom: 10px;
+  line-height: 200%;
 }
 
 .bullet li::before {
   content: "• ";
-  color: var(--orange);
-}
-
-.bullet li:last-child:before {
-  content: "  ";
-}
-
-.bullet li:last-child {
-  margin-top: 20px;
-  padding-bottom: 10px;
+  color: var(--main-theme);
 }
 
 ul.bullet {
-  margin-bottom: 120px;
+  /*margin-bottom: 120px;*/
 }
 
 .tech-icon {

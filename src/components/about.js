@@ -1,16 +1,60 @@
 import React from 'react';
 
+import SkillCard from './skillCard';
+
+const softSkills = [
+  'Attention to detail',
+  'Problem solving',
+  'Communication',
+  'Team work',
+  'Autonomy',
+  'Time Management'
+];
+
+const technicalSkills = [
+  'JavaScript',
+  'HTML5 / CSS3',
+  'React / Redux',
+  'React Native',
+  'Angular',
+  'Node / Express',
+  'jQuery / Ajax',
+  'Mongo / MySQL',
+  'Docker',
+  'AWS / Heroku'
+];
+
 const About = () => (
   <section className="section-about js--section--about" id="about">
 
     <div className="row">
       <h2>my story</h2>
       <p className="long-copy">
-        I was building data tools and helping an online marketplace and hospitality service company, a transportation network company, an online ticket selling platform company, and more . . .
+        I used to build data tools with scalable processes and work with companies, like an online marketplace and hospitality service, a transportation network, an online ticket selling platform, and more,  to harness large quantities of data.
       </p>
+
+      <SkillCard
+        icon='../../Assets/img/soft-skills.png'
+        text='Level Up Soft Skills'
+        skills={softSkills}
+        length={softSkills.length}
+      />
+
+
       <p className="long-copy">
-        Now I am a <strong>Software Engineer</strong> focusing on front-end architecture and modular design systems
+        I was constantly thinking about the room of improvements, more efficient ways to solve problems. My skills allow me to take on more challenges, to solve greater problems. And I want to be more creative and build something that <strong>matters to people's lives</strong>.
       </p>
+
+      <p className="long-copy">
+        Now, I am a <strong>Software Engineer</strong> focusing on front-end architecture.
+      </p>
+
+      <SkillCard
+        icon='../../Assets/img/technical-skills.svg'
+        text='Pack Up Technical Skills'
+        skills={technicalSkills}
+        length={technicalSkills.length}
+      />
     </div>
 
     <div className="row js--wp-1">
