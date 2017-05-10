@@ -12,14 +12,7 @@ class Header extends Component {
       <header>
         <div className="hero-text-box">
           <h1>{this.props.text1}</h1>
-          <h1>{this.props.text2}</h1>
-          <a
-            style={{ color: '#fff' }}
-            className='btn-full'
-            onClick={() => this.scroll('.js--section--about')}
-          >
-            KNOW MORE
-          </a>
+          <h4>{this.props.text2}</h4>
         </div>
       </header>
     );

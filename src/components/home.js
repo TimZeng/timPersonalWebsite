@@ -6,8 +6,8 @@ import About from './about';
 const Home = () => (
   <div>
     <Header
-      text1='DREAM is something that makes you feel'
-      text2='&nbsp; &nbsp;PERSISTENCE is happiness...'
+      text1='TIM ZENG'
+      text2='SOFTWARE ENGINEER'
     />
 
     <About />

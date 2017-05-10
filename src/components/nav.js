@@ -17,7 +17,10 @@ class Nav extends Component {
         <div className='row'>
           <img src="../../Assets/img/head.jpeg" alt="TZ logo" className="logo" />
           <ul className="main-nav js--main-nav">
-            <li>Tim Zeng</li>
+            <li onClick={() => this.props.redirect('')}>About</li>
+            <li onClick={() => this.props.redirect('work')}>Works</li>
+            <li onClick={() => this.props.redirect('learnings')}>Learnings</li>
+            <li onClick={() => this.props.redirect('contact')}>Contact</li>
           </ul>
 
             <ul className="social-links">
@@ -39,7 +42,3 @@ class Nav extends Component {
 }
 
 export default Nav;
-            // <li onClick={() => this.props.redirect('')}><a>About</a></li>
-            // <li onClick={() => this.props.redirect('work')}><a>Works</a></li>
-            // <li onClick={() => this.props.redirect('learnings')}><a>Learnings</a></li>
-            // <li><a id='contact'>Contact</a></li>

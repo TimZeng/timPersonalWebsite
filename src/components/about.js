@@ -28,10 +28,11 @@ const About = () => (
   <section className="section-about js--section--about" id="about">
 
     <div className="row">
-      <h2>my story</h2>
+      <h2>About Me</h2>
       <p className="long-copy">
-        I used to build data tools with scalable processes and work with companies, like an online marketplace and hospitality service, a transportation network, an online ticket selling platform, and more,  to harness large quantities of data.
+        A detail-oriented person focusing on front-end architecture and modular design systems
       </p>
+    </div>
 
       <SkillCard
         icon='../../Assets/img/soft-skills.png'
@@ -40,7 +41,7 @@ const About = () => (
         length={softSkills.length}
       />
 
-
+    <div className="row">
       <p className="long-copy">
         I was constantly thinking about the room of improvements, more efficient ways to solve problems. My skills allow me to take on more challenges, to solve greater problems. And I want to be more creative and build something that <strong>matters to people's lives</strong>.
       </p>
@@ -49,13 +50,14 @@ const About = () => (
         Now, I am a <strong>Software Engineer</strong> focusing on front-end architecture.
       </p>
 
-      <SkillCard
-        icon='../../Assets/img/technical-skills.svg'
-        text='Pack Up Technical Skills'
-        skills={technicalSkills}
-        length={technicalSkills.length}
-      />
     </div>
+
+    <SkillCard
+      icon='../../Assets/img/technical-skills.svg'
+      text='Pack Up Technical Skills'
+      skills={technicalSkills}
+      length={technicalSkills.length}
+    />
 
     <div className="row js--wp-1">
       <div>
