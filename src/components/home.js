@@ -2,6 +2,8 @@ import React from 'react';
 
 import Header from './header';
 import About from './about';
+import Skill from './skill';
+// import Work from './work';
 
 const Home = () => (
   <div>
@@ -11,7 +13,11 @@ const Home = () => (
     />
 
     <About />
+    <Skill />
   </div>
 );
 
 export default Home;
+
+    // <Work />
+

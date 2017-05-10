@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
 
 import $ from 'jquery';
+import Waypoint from 'react-waypoint';
 
 class Header extends Component {
-  scroll(element) {
-    $('html, body').animate({ scrollTop: $(element).offset().top - 77 }, 1000);
+  handleWaypointEnter() {
+    $('nav').removeClass('sticky animated fadeInDown');
+  }
+
+  handleWaypointLeave() {
+    $('nav').addClass('sticky animated fadeInDown');
   }
 
   render() {
     return (
-      <header>
-        <div className="hero-text-box">
-          <h1>{this.props.text1}</h1>
-          <h4>{this.props.text2}</h4>
-        </div>
-      </header>
+      <Waypoint
+        onEnter={this.handleWaypointEnter}
+        onLeave={this.handleWaypointLeave}
+      >
+
+        <header>
+          <div className="hero-text-box">
+            <h1>{this.props.text1}</h1>
+            <h4>{this.props.text2}</h4>
+          </div>
+        </header>
+
+      </Waypoint>
+
     );
   }
 }
 
 export default Header;
-      // <p style={{ color: '#fff' }}>
-        // &nbsp; &nbsp; &nbsp; &nbsp;
-        // <i className='ion-location' />
-        // &nbsp; &nbsp;San Francisco Bay Area
-      // </p>

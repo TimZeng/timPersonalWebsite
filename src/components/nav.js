@@ -3,38 +3,38 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Nav extends Component {
-  scrollToAbout() {
-    $('html, body').animate({ scrollTop: $('.js--section--about').offset().top - 77 }, 1000);
-  }
-
-  scrollToWork() {
-    $('html, body').animate({ scrollTop: $('.js--section--work').offset().top - 77 }, 1000);
+  scrollTo(section) {
+    $('html, body').animate({
+      scrollTop: $(`.js--section--${section}`).offset().top + 1
+    }, 1000);
   }
 
   render() {
     return (
-      <nav className='sticky'>
+      <nav>
         <div className='row'>
           <img src="../../Assets/img/head.jpeg" alt="TZ logo" className="logo" />
           <ul className="main-nav js--main-nav">
-            <li onClick={() => this.props.redirect('')}>About</li>
-            <li onClick={() => this.props.redirect('work')}>Works</li>
+            <li onClick={() => this.scrollTo('about')}>About</li>
+            <li onClick={() => this.scrollTo('skill')}>Skills</li>
+            <li onClick={() => this.scrollTo('work')}>Works</li>
             <li onClick={() => this.props.redirect('learnings')}>Learnings</li>
             <li onClick={() => this.props.redirect('contact')}>Contact</li>
           </ul>
 
-            <ul className="social-links">
-              <li>
-                <a href="https://www.linkedin.com/in/tim-zeng-5ab68549/" target='_blank'>
-                  <i className="ion-social-linkedin" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/TimZeng" target='_blank'>
-                  <i className="ion-social-github" />
-                </a>
-              </li>
-            </ul>
+          <ul className="social-links">
+            <li>
+              <a href="https://www.linkedin.com/in/tim-zeng-5ab68549/" target='_blank'>
+                <i className="ion-social-linkedin" />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/TimZeng" target='_blank'>
+                <i className="ion-social-github" />
+              </a>
+            </li>
+          </ul>
+
         </div>
       </nav>
     );
