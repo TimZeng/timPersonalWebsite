@@ -62,6 +62,10 @@ body {
   visibility: hidden;
 }
 
+div.react-d3-core__legend.legend {
+  display: none;
+}
+
 /* ----------------------------------------------------------- */
 /* Reusable Components */
 /* ----------------------------------------------------------- */
@@ -463,6 +467,83 @@ ul.bullet {
 
 .section-skill h2:after {
   background-color: var(--theme-3);
+}
+
+.section-skill .techChart {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-skill .charts {
+  min-width: 400px;
+  width: 50%;
+  margin: 0 auto;
+
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+
+/*  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;*/
+  display: flex;
+}
+
+.section-skill h3 {
+  width: 100%;
+  text-align: center;
+  margin: 30px auto;
+  font-weight: 500;
+}
+
+/*.tech-lists {
+  display: flex;
+  justify-content: center;
+}*/
+
+ul.tech-list {
+  min-width: 500px;
+  width: 50%;
+  margin: 0 auto;
+
+  /*width: 100%;*/
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.tech-list .tech-icon {
+  height: 40px;
+  width: auto;
+  margin: 10px 8px;
+  transition: height 0.2s, padding-top 0.2s;
+}
+
+.tech-item {
+  height: 60px;
+  width: auto;
+}
+
+.tech-item .label {
+  position: relative;
+  top: -50px;
+  left: 8px;
+  visibility: hidden;
+
+  width: auto;
+  height: 40px;
+
+  padding: auto 0;
+}
+
+.tech-item:hover .label {
+  visibility: visible;
+  background-color: rgba(255, 255, 255, 0.7);
+  /*background-color: red;*/
 }
 
 /* ----------------------------------------------------------- */
