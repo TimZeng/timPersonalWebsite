@@ -41,6 +41,7 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -303,7 +304,8 @@ nav.social-links {
 .ion-social-linkedin,
 .ion-social-github,
 .ion-social-googleplus,
-.ion-social-instagram {
+.ion-social-instagram,
+.ion-close-circled {
   transition: color 0.2s;
 }
 
@@ -324,7 +326,12 @@ nav.social-links {
 }
 
 .ion-email:hover {
-  color: #fff;
+  color: var(--light-theme);
+}
+
+.ion-close-circled:hover {
+  cursor: pointer;
+  color: black;
 }
 
 /* -----------------------------------------------------------* /
@@ -466,16 +473,10 @@ ul.tech-list {
 }
 
 .workCard {
-  /*width: 48%;*/
   width: 350px;
-  /*height: 350px;*/
   background-color: #fff;
   margin: 20px auto;
   padding: 3px;
-/*
-  display: flex;
-  justify-content: center;*/
-
 }
 
 img.work-small-view {
@@ -485,6 +486,10 @@ img.work-small-view {
 
   max-width: 344px;
   max-height: 250px;
+}
+
+img.work-small-view:hover {
+  cursor: pointer;
 }
 
 .workCard .text {
@@ -512,24 +517,46 @@ img.work-small-view {
 /* ----------------------------------------------------------- */
 
 .section-contact {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 20;
+  padding: 50px 60px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-.contact-form {
+.section-contact h2:after {
+  background-color: var(--light-theme);
+}
+
+.section-contact .ion-close-circled {
+  display: block;
+  width: 100%;
+  margin-left: 95%;
+}
+
+.section-contact form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-contact ul.social-links {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-form {
+
+}
+
+/*.contact-form {
   position: relative;
   background-color: #fff;
-  width: 60%;
-  height: 50%;
+  width: 60vw;
+  height: 50vh;
   margin: 25vh auto;
-}
+}*/
 
-input[type=text],
+/*input[type=text],
 input[type=email],
 select,
 textarea {
@@ -537,19 +564,75 @@ textarea {
   padding: 7px;
   border-radius: 3px;
   border: 1px solid #ccc;
-}
+}*/
 
 textarea {
   height: 100px;
 }
-
+/*
 input[type=checkbox] {
   margin: 10px 5px 10px 0;
-}
+}*/
 
 *:focus {
   outline: none;
 }
+
+/* ----------------------------------------------------------- */
+/* Overlay */
+/* ----------------------------------------------------------- */
+
+#overlay {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+#popup-window {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.display {
+  height: 80%;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*background-color: #fff;*/
+}
+
+img.work-large-view {
+  display: block;
+  margin: 0 auto;
+
+  height: 100%;
+  width: auto;
+}
+
+.display section,
+.display .img-display {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+}
+
 
 /* ----------------------------------------------------------- */
 /* Footer */

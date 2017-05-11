@@ -21,11 +21,11 @@ const WorkCard = ({ name, description, link, onClick }) => {
 
   return (
     <div
-      onClick={() => onClick(name)}
       className='workCard'
     >
       <img
         className='work-small-view'
+        onClick={() => onClick(name)}
         src={imgURL}
         alt={name}
       />

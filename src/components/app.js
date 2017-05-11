@@ -3,7 +3,9 @@ import { browserHistory } from 'react-router';
 
 import Nav from './nav';
 import Footer from './footer';
+import Overlay from './overlay';
 import Contact from './contact';
+import ImgDisplay from './imgDisplay';
 
 export default class App extends Component {
   redirect(pageTo) {
@@ -21,9 +23,13 @@ export default class App extends Component {
           })}
         </div>
         <Footer />
+        <Overlay>
+          <Contact
+            img='tagme-3'
+          />
+        </Overlay>
 
       </div>
     );
   }
 }
-        // <Contact />
