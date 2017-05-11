@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import $ from 'jquery';
 import Waypoint from 'react-waypoint';
 
 import TechPieChart from './pieChart';

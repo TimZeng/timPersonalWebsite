@@ -3,21 +3,6 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import Waypoint from 'react-waypoint';
 
-// import SkillCard from './skillCard';
-
-// const technicalSkills = [
-//   'JavaScript',
-//   'HTML5 / CSS3',
-//   'React / Redux',
-//   'React Native',
-//   'Angular',
-//   'Node / Express',
-//   'jQuery / Ajax',
-//   'Mongo / MySQL',
-//   'Docker',
-//   'AWS / Heroku'
-// ];
-
 class About extends Component {
   state = { animated: false };
 

@@ -123,7 +123,7 @@ h3 {
   /*text-align: center;*/
 }
 
-h6 {
+/*h6 {
   font-weight: 300;
   letter-spacing: 1px;
   padding: 5px auto;
@@ -137,7 +137,7 @@ h6:after {
   content: " ";
   width: 80px;
   margin: 5px auto;
-}
+}*/
 
 h2:after {
   display: block;
@@ -377,66 +377,6 @@ header {
   background-color: var(--theme-2);
 }
 
-/*.skill-card {
-  width: 100%;
-  background-color: #fff;
-  padding: 1%;
-  margin: 20px 0;
-  font-size: 120%;
-
-   -webkit-box-shadow: 0 10px 6px -6px #777;
-      -moz-box-shadow: 0 10px 6px -6px #777;
-           box-shadow: 0 10px 6px -6px #777;
-}
-
-.skill-card img {
-  width: 5%;
-  height: auto;
-  display: block;
-  margin: 25px auto;
-}
-
- .skill-list {
-  width: 50%;
-  vertical-align: top;
-  padding-left: 18%;
- }*/
-
-
-/*.link-icon {
-  font-size: 120%;
-}
-
-.brief-description {
-  color: var(--description-grey);
-  font-style: italic;
-  margin-bottom: 0;
-}
-
-.bullet {
-  display: inline-block;
-}
-
-.bullet li {
-  line-height: 200%;
-}
-
-.bullet li::before {
-  content: "• ";
-  color: var(--main-theme);
-}
-
-ul.bullet {
-  margin-bottom: 120px;
-}
-
-.tech-icon {
-  display: inline-block;
-  width: auto;
-  height: 50px;
-  margin-right: 20px;
-}*/
-
 .section-about a:link,
 .section-about a:visited {
   color: var(--light-theme);
@@ -447,15 +387,6 @@ ul.bullet {
 .section-about a:active {
   text-decoration: underline;
 }
-
-/*.section-about h3 a:last-child {
-  color: #fff;
-}
-
-.section-about h3 a:last-child:hover,
-.section-about h3 a:last-child:active {
-  color: #fff;
-}*/
 
 /* ----------------------------------------------------------- */
 /* Skills */
@@ -500,17 +431,11 @@ ul.bullet {
   font-weight: 500;
 }
 
-/*.tech-lists {
-  display: flex;
-  justify-content: center;
-}*/
-
 ul.tech-list {
   min-width: 500px;
   width: 50%;
   margin: 0 auto;
 
-  /*width: 100%;*/
   display: flex;
   -webkit-justify-content: space-around;
   justify-content: space-around;
@@ -520,30 +445,6 @@ ul.tech-list {
   height: 40px;
   width: auto;
   margin: 10px 8px;
-  transition: height 0.2s, padding-top 0.2s;
-}
-
-.tech-item {
-  height: 60px;
-  width: auto;
-}
-
-.tech-item .label {
-  position: relative;
-  top: -50px;
-  left: 8px;
-  visibility: hidden;
-
-  width: auto;
-  height: 40px;
-
-  padding: auto 0;
-}
-
-.tech-item:hover .label {
-  visibility: visible;
-  background-color: rgba(255, 255, 255, 0.7);
-  /*background-color: red;*/
 }
 
 /* ----------------------------------------------------------- */
@@ -551,7 +452,59 @@ ul.tech-list {
 /* ----------------------------------------------------------- */
 
 .section-work {
+  background-color: var(--background);
+}
+
+.section-work h2:after {
+  background-color: var(--theme-4);
+}
+
+.work-display {
+  width: 100%;
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+.workCard {
+  /*width: 48%;*/
+  width: 350px;
+  /*height: 350px;*/
   background-color: #fff;
+  margin: 20px auto;
+  padding: 3px;
+/*
+  display: flex;
+  justify-content: center;*/
+
+}
+
+img.work-small-view {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 344px;
+  max-height: 250px;
+}
+
+.workCard .text {
+  padding: 2%;
+  margin-bottom: 0px;
+}
+
+.text {
+
+}
+
+.icon-link {
+  margin-left: 5px;
+  color: var(--border-grey);
+  transition: color 0.2s;
+  font-size: 120%;
+}
+
+.icon-link:hover {
+  color: var(--light-theme);
 }
 
 /* ----------------------------------------------------------- */
