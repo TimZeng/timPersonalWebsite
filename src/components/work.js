@@ -13,7 +13,6 @@ const Work = ({ toggleOverlay }) => {
 
     const index = indexes[key] || 0;
 
-    console.log(key, 'is clicked');
     toggleOverlay(true, 'ImgDisplay', index);
   };
 

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import $ from 'jquery';
+
+import { toggleOverlay } from '../actions';
 
 class Nav extends Component {
   scrollTo(section) {
@@ -18,7 +21,11 @@ class Nav extends Component {
             <li onClick={() => this.scrollTo('about')}>About</li>
             <li onClick={() => this.scrollTo('skill')}>Skills</li>
             <li onClick={() => this.scrollTo('work')}>Works</li>
-            <li onClick={() => this.props.toggleOverlay(true, 'contact')}>Contact</li>
+            <li
+              onClick={
+              () => this.props.toggleOverlay({ overlay: true, component: 'contact' })
+              }
+            >Contact</li>
           </ul>
 
           <ul className="social-links">
@@ -40,5 +47,5 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default connect(null, { toggleOverlay })(Nav);
             // <li onClick={() => this.props.redirect('learnings')}>Learnings</li>

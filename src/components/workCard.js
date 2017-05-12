@@ -1,42 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const WorkCard = ({ name, description, link, onClick }) => {
-  const nameLower = name.toLowerCase().replace(/\s/g, '');
-  const imgURL = `../../Assets/img/projects/${nameLower}-1.jpeg`;
+import { connect } from 'react-redux';
 
-  const renderName = () => {
-    if (link === null) {
-      return <h6>{name}</h6>;
+import { toggleOverlay } from '../actions';
+
+class WorkCard extends Component {
+
+  renderName() {
+    if (this.props.link === null) {
+      return <h6>{this.props.name}</h6>;
     }
 
     return (
       <h6>
-        {name}
-        <a className='icon-link' href={link} target='_blank'>
+        {this.props.name}
+        <a className='icon-link' href={this.props.link} target='_blank'>
           <i className='ion-link' />
         </a>
       </h6>
     );
-  };
+  }
 
-  return (
-    <div
-      className='workCard'
-    >
-      <img
-        className='work-small-view'
-        onClick={() => onClick(nameLower)}
-        src={imgURL}
-        alt={name}
-      />
+  render() {
+    const nameLower = this.props.name.toLowerCase().replace(/\s/g, '');
+    const imgURL = `../../Assets/img/projects/${nameLower}-1.jpeg`;
 
-      <div className='text'>
-        {renderName()}
-        <p>{description}</p>
+    return (
+      <div
+        className='workCard'
+      >
+        <img
+          className='work-small-view'
+          onClick={
+            () => this.props.toggleOverlay({
+              overlay: true,
+              component: 'ImgDisplay',
+              project: nameLower
+            })
+          }
+          src={imgURL}
+          alt={this.props.name}
+        />
+
+        <div className='text'>
+          {this.renderName()}
+          <p>{this.props.description}</p>
+        </div>
+
       </div>
+    );
+  }
+}
 
-    </div>
-  );
-};
-
-export default WorkCard;
+export default connect(null, { toggleOverlay })(WorkCard);
