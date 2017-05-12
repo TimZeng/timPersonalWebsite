@@ -29,6 +29,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -330,11 +334,6 @@ nav.social-links {
   color: var(--light-theme);
 }
 
-.ion-close-circled:hover {
-  cursor: pointer;
-  color: black;
-}
-
 /* -----------------------------------------------------------* /
 /* Header */
 /* ----------------------------------------------------------- */
@@ -497,10 +496,6 @@ img.work-small-view:hover {
   margin-bottom: 0px;
 }
 
-.text {
-
-}
-
 .icon-link {
   margin-left: 5px;
   color: var(--border-grey);
@@ -544,23 +539,15 @@ img.work-small-view:hover {
   margin-right: auto;
 }
 
-/*.contact-form {
-  position: relative;
-  background-color: #fff;
-  width: 60vw;
-  height: 50vh;
-  margin: 25vh auto;
-}*/
+.section-contact .ion-close-circled {
+  color: var(--light-theme);
+  transition: color 0.2s;
+}
 
-/*input[type=text],
-input[type=email],
-select,
-textarea {
-  width: 100%;
-  padding: 7px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}*/
+.section-contact .ion-close-circled:hover {
+  cursor: pointer;
+  color: var(--darker-light-theme);
+}
 
 textarea {
   height: 100px;
@@ -582,14 +569,6 @@ textarea {
   background-color: var(--darker-light-theme);
 }
 
-/*
-input[type=checkbox] {
-  margin: 10px 5px 10px 0;
-}*/
-
-*:focus {
-  outline: none;
-}
 
 /* ----------------------------------------------------------- */
 /* Overlay */
@@ -612,7 +591,6 @@ input[type=checkbox] {
   top: 0;
   width: 100vw;
   height: 100vh;
-  /*background-color: rgba(255, 255, 255, 0.3);*/
 }
 
 .display {
@@ -627,15 +605,23 @@ input[type=checkbox] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*background-color: #fff;*/
 }
 
 .display section,
 .display .img-display {
   display: block;
+}
+
+.display section {
   margin: 0 auto;
-  width: 80%;
   height: 100%;
+  width: 60%;
+}
+
+.display .img-display {
+  margin: 5% auto;
+  height: 70%;
+  width: 80%;
 }
 
 /* ----------------------------------------------------------- */
@@ -661,22 +647,15 @@ input[type=checkbox] {
 
 img.work-large-view {
   display: inline-block;
-}
-
-img.landscape {
   height: 100%;
   width: auto;
 }
 
-img.portrait {
-  height: 100%;
-  width: auto;
+img.work-large-view:hover {
+  cursor: pointer;
 }
 
 .arrow i {
-  /*display: inline-block;*/
-  /*font-size: 150%;*/
-
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -697,7 +676,11 @@ img.portrait {
   right: 10%;
 }
 
-
+.img-label {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
 
 /* ----------------------------------------------------------- */
 /* Footer */

@@ -76,9 +76,9 @@ class Skill extends Component {
             />
           </div>
 
-          { this.renderWaypoint() }
-
           <h3>Other Technologies & Tools</h3>
+
+          { this.renderWaypoint() }
 
           <ul className='tech-list'>
             <li>
