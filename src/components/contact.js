@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import { toggleOverlay } from '../actions';
+import { toggleOverlay, updateMessage } from '../actions';
 
 class Contact extends Component {
 
@@ -19,46 +19,81 @@ class Contact extends Component {
           <h2>Send me a message</h2>
 
           <form id="contact-form" method="post" action="contact.php" role="form">
+            <div className="controls">
 
-
-              <div className="controls">
-
-                  <div className="row">
-                      <div className="col-md-6">
-                          <div className="form-group">
-                              <label for="form_name">Name *</label>
-                              <input onChange={
-                                (e) => this.updateState('firstName', e.target.value)
-                              } id="form_name" type="text" name="name" className="form-control" placeholder="your name *" required="required" data-error="Name is required." />
-                              <div className="help-block with-errors"></div>
-                          </div>
-                      </div>
-                      <div className="col-md-6">
-                          <div className="form-group">
-                              <label for="form_email">Email *</label>
-                              <input onChange={
-                                (e) => this.updateState('lastName', e.target.value)
-                              } id="form_lastname" type="text" name="surname" className="form-control" placeholder="emial address *" required="required" data-error="Email is required." />
-                              <div className="help-block with-errors"></div>
-                          </div>
-                      </div>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="form_name">Name *</label>
+                    <input
+                      onChange={
+                        e => this.props.updateMessage({
+                          prop: 'name',
+                          value: e.target.value
+                        })
+                      }
+                      id="form_name"
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      placeholder="your name *"
+                      required="required"
+                      data-error="Name is required."
+                    />
+                    <div className="help-block with-errors" />
                   </div>
+                </div>
 
-                  <div className="row">
-                      <div className="col-md-12">
-                          <div className="form-group">
-                              <label for="form_message">Message *</label>
-                              <textarea onChange={
-                                (e) => this.updateState('message', e.target.value)
-                              } id="form_message" name="message" className="form-control" placeholder="Leave a message ..." rows="4" required="required" data-error="Please,leave a message."></textarea>
-                              <div className="help-block with-errors"></div>
-                          </div>
-                      </div>
-                      <div className="col-md-12">
-                          <div onClick={ () => this.sendMessage() } className="btn btn-success btn-send">Send</div>
-                      </div>
+                <div className="col-md-6">
+                  <div className="form-group">
+                    <label htmlFor="form_email">Email *</label>
+                    <input
+                      onChange={
+                        (e) => this.props.updateMessage({
+                          prop: 'email',
+                          value: e.target.value
+                        })
+                      }
+                      id="form_email"
+                      type="text"
+                      name="email"
+                      className="form-control"
+                      placeholder="emial address *"
+                      required="required"
+                      data-error="Email is required."
+                    />
+                    <div className="help-block with-errors" />
                   </div>
+                </div>
               </div>
+
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="form-group">
+                    <label htmlFor="form_message">Message *</label>
+                    <textarea
+                      onChange={
+                        (e) => this.props.updateMessage({
+                          prop: 'message',
+                          value: e.target.value
+                        })
+                      }
+                      id="form_message"
+                      name="message"
+                      className="form-control"
+                      placeholder="Leave a message ..."
+                      rows="4"
+                      required="required"
+                      data-error="Please,leave a message."
+                    />
+                    <div className="help-block with-errors" />
+                  </div>
+                </div>
+                <div className="col-md-12">
+                    <div onClick={() => this.sendMessage()} className="btn btn-success btn-send">Send</div>
+                </div>
+              </div>
+            </div>
 
           </form>
 
@@ -106,4 +141,4 @@ class Contact extends Component {
 
 }
 
-export default connect(null, { toggleOverlay })(Contact);
+export default connect(null, { toggleOverlay, updateMessage })(Contact);
