@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { toggleOverlay } from '../actions';
 
 import $ from 'jquery';
 import Waypoint from 'react-waypoint';
@@ -65,7 +68,14 @@ class About extends Component {
           { this.renderWaypoint() }
 
           <p className="long-copy">
-            Thinking about a new project idea or simply want to chat?<br />Reach out to me through&nbsp;
+            Thinking about a new project idea or simply want to chat?<br />Send me a&nbsp;
+            <i
+              className='message'
+              onClick={
+                () => this.props.toggleOverlay({ overlay: true, component: 'contact' })
+              }
+            >message</i>
+            &nbsp;or an&nbsp;
             <a href="mailto:zengtiantian1122@gmail.com">email</a>
           </p>
 
@@ -75,4 +85,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default connect(null, { toggleOverlay })(About);

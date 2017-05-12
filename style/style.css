@@ -385,13 +385,17 @@ header {
 }
 
 .section-about a:link,
-.section-about a:visited {
+.section-about a:visited,
+i.message {
+  font-style: normal;
   color: var(--light-theme);
   border: none;
 }
 
 .section-about a:hover,
-.section-about a:active {
+.section-about a:active,
+i.message:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 

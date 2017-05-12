@@ -47,7 +47,7 @@ const Work = ({ toggleOverlay }) => {
 
           <WorkCard
             name='Peony Garden'
-            description='I am thinking on it'
+            description='Simple Bootstrap website for product display'
             link={null}
             onClick={onClick}
           />
