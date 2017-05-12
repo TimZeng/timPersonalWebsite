@@ -193,7 +193,6 @@ h2:after {
   vertical-align: middle;
 }
 
-
 /* ----------------------------------------------------------- */
 /* Nav */
 /* ----------------------------------------------------------- */
@@ -731,8 +730,56 @@ footer span {
 }
 
 /* ----------------------------------------------------------- */
+/* Processing */
+/* ----------------------------------------------------------- */
+
+.processing-block {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 30;
+}
+
+.processing-block .icon-processing {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: auto;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-30px);
+
+  transform-origin: center;
+  animation: spinning 1s infinite;
+  animation-timing-function: linear;
+
+  font-size: 200%;
+  text-align: center;
+}
+
+.ion-load-c {
+  display: block;
+  color: var(--light-theme);
+}
+
+/* ----------------------------------------------------------- */
 /* Animations */
 /* ----------------------------------------------------------- */
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 .js--wp-1,
 .js--wp-2,

@@ -7,8 +7,11 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'UPDATE_MESSAGE':
-      console.log('changing', action.payload.prop, 'to', action.payload.value);
       return { ...state, [action.payload.prop]: action.payload.value };
+
+    case 'MESSAGE_SENT':
+      console.log('message send!');
+      return INITIAL_STATE;
 
     default:
       return state;

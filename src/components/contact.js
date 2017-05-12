@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import { toggleOverlay, updateMessage } from '../actions';
+import {
+  toggleOverlay,
+  changeProcessing,
+  updateMessage,
+  sendMessage
+} from '../actions';
 
 class Contact extends Component {
+
+  submit(event) {
+    event.preventDefault();
+    console.log('submitting!!');
+    this.props.changeProcessing(true);
+  }
 
   render() {
     return (
@@ -18,7 +29,7 @@ class Contact extends Component {
 
           <h2>Send me a message</h2>
 
-          <form id="contact-form" method="post" action="contact.php" role="form">
+          <form id="contact-form" onSubmit={(e) => this.submit(e)}>
             <div className="controls">
 
               <div className="row">
@@ -37,7 +48,7 @@ class Contact extends Component {
                       name="name"
                       className="form-control"
                       placeholder="your name *"
-                      required="required"
+                      required
                       data-error="Name is required."
                     />
                     <div className="help-block with-errors" />
@@ -59,7 +70,7 @@ class Contact extends Component {
                       name="email"
                       className="form-control"
                       placeholder="emial address *"
-                      required="required"
+                      required
                       data-error="Email is required."
                     />
                     <div className="help-block with-errors" />
@@ -83,15 +94,21 @@ class Contact extends Component {
                       className="form-control"
                       placeholder="Leave a message ..."
                       rows="4"
-                      required="required"
+                      required
                       data-error="Please,leave a message."
                     />
                     <div className="help-block with-errors" />
                   </div>
                 </div>
-                <div className="col-md-12">
-                    <div onClick={() => this.sendMessage()} className="btn btn-success btn-send">Send</div>
+
+                <div className='col-md-12'>
+                  <input
+                    type='submit'
+                    value='Send'
+                    className="btn btn-success btn-send"
+                  />
                 </div>
+
               </div>
             </div>
 
@@ -141,4 +158,9 @@ class Contact extends Component {
 
 }
 
-export default connect(null, { toggleOverlay, updateMessage })(Contact);
+export default connect(null, {
+  toggleOverlay,
+  changeProcessing,
+  updateMessage,
+  sendMessage
+})(Contact);

@@ -7,6 +7,7 @@ import Footer from './footer';
 import Overlay from './overlay';
 import Contact from './contact';
 import ImgDisplay from './imgDisplay';
+import Processing from './processing';
 
 class App extends Component {
   redirect(pageTo) {
@@ -31,6 +32,12 @@ class App extends Component {
     }
   }
 
+  renderProcessing() {
+    if (this.props.processing) {
+      return <Processing />;
+    }
+  }
+
   render() {
     return (
       <div>
@@ -47,13 +54,15 @@ class App extends Component {
 
         {this.renderOverlay()}
 
+        {this.renderProcessing()}
+
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ showOverlay, overlayComponent }) => (
-  { showOverlay, overlayComponent }
+const mapStateToProps = ({ showOverlay, overlayComponent, processing }) => (
+  { showOverlay, overlayComponent, processing }
 );
 
 export default connect(mapStateToProps)(App);
