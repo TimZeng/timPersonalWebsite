@@ -6,7 +6,7 @@ export const updateMessage = ({ prop, value }) => ({
 });
 
 export const sendMessage = ({ name, email, message }) => {
-  axios.post('http://localhost:8000/message', { name, email, message })
+  axios.post('/message', { name, email, message })
     .then(response => {
       if (response.status === 200) {
         return {

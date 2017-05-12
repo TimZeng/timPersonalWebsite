@@ -15,6 +15,7 @@ class Contact extends Component {
     event.preventDefault();
     console.log('submitting!!');
     this.props.changeProcessing(true);
+    this.props.sendMessage(this.props.message);
   }
 
   render() {
@@ -155,10 +156,13 @@ class Contact extends Component {
 
     );
   }
-
 }
 
-export default connect(null, {
+const mapStateToProps = ({ message }) => (
+  { message }
+);
+
+export default connect(mapStateToProps, {
   toggleOverlay,
   changeProcessing,
   updateMessage,
