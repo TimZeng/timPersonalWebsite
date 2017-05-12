@@ -25,7 +25,7 @@ const WorkCard = ({ name, description, link, onClick }) => {
     >
       <img
         className='work-small-view'
-        onClick={() => onClick(name)}
+        onClick={() => onClick(nameLower)}
         src={imgURL}
         alt={name}
       />

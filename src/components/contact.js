@@ -1,10 +1,15 @@
 import React from 'react';
 
-const Contact = () => (
+const Contact = ({ toggleOverlay }) => (
 
   <section className="section-contact">
     <div className="row">
-      <i className='ion-close-circled' />
+
+      <i
+        className='ion-close-circled'
+        onClick={() => toggleOverlay(false, '')}
+      />
+
       <h2>Send me a message</h2>
 
       <form id="contact-form" method="post" action="contact.php" role="form">
@@ -18,7 +23,7 @@ const Contact = () => (
                           <label for="form_name">Name *</label>
                           <input onChange={
                             (e) => this.updateState('firstName', e.target.value)
-                          } id="form_name" type="text" name="name" className="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."/>
+                          } id="form_name" type="text" name="name" className="form-control" placeholder="your name *" required="required" data-error="Name is required." />
                           <div className="help-block with-errors"></div>
                       </div>
                   </div>
@@ -27,7 +32,7 @@ const Contact = () => (
                           <label for="form_email">Email *</label>
                           <input onChange={
                             (e) => this.updateState('lastName', e.target.value)
-                          } id="form_lastname" type="text" name="surname" className="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."/>
+                          } id="form_lastname" type="text" name="surname" className="form-control" placeholder="emial address *" required="required" data-error="Email is required." />
                           <div className="help-block with-errors"></div>
                       </div>
                   </div>
@@ -39,7 +44,7 @@ const Contact = () => (
                           <label for="form_message">Message *</label>
                           <textarea onChange={
                             (e) => this.updateState('message', e.target.value)
-                          } id="form_message" name="message" className="form-control" placeholder="Leave a message ..." rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                          } id="form_message" name="message" className="form-control" placeholder="Leave a message ..." rows="4" required="required" data-error="Please,leave a message."></textarea>
                           <div className="help-block with-errors"></div>
                       </div>
                   </div>

@@ -5,6 +5,7 @@
 :root {
   --main-theme: /*#E67E22; */#0d2c5a;
   --light-theme: #5b9bbc;
+  --darker-light-theme: #5490af;
   --background: #eee;
   --theme-2: #f08b65;
   --theme-3: #e76270;
@@ -469,7 +470,6 @@ ul.tech-list {
 .work-display {
   width: 100%;
   display: flex;
-  /*justify-content: space-between;*/
 }
 
 .workCard {
@@ -544,10 +544,6 @@ img.work-small-view:hover {
   margin-right: auto;
 }
 
-.section-form {
-
-}
-
 /*.contact-form {
   position: relative;
   background-color: #fff;
@@ -569,6 +565,23 @@ textarea {
 textarea {
   height: 100px;
 }
+
+.form-control:focus {
+  border-color: var(--light-theme);
+}
+
+.btn-success {
+  color: #fff;
+  background-color: var(--light-theme);
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-success:hover {
+  cursor: pointer;
+  background-color: var(--darker-light-theme);
+}
+
 /*
 input[type=checkbox] {
   margin: 10px 5px 10px 0;
@@ -589,7 +602,7 @@ input[type=checkbox] {
   top:0;
   bottom:0;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 20;
 }
 
@@ -599,7 +612,7 @@ input[type=checkbox] {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.3);
+  /*background-color: rgba(255, 255, 255, 0.3);*/
 }
 
 .display {
@@ -617,21 +630,73 @@ input[type=checkbox] {
   /*background-color: #fff;*/
 }
 
-img.work-large-view {
-  display: block;
-  margin: 0 auto;
-
-  height: 100%;
-  width: auto;
-}
-
 .display section,
 .display .img-display {
   display: block;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
   height: 100%;
 }
+
+/* ----------------------------------------------------------- */
+/* Image Display */
+/* ----------------------------------------------------------- */
+
+.img-display {
+}
+
+.img-container {
+  display: flex;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  width: 17px;
+  height: 100%;
+  display: inline-block;
+}
+
+img.work-large-view {
+  display: inline-block;
+}
+
+img.landscape {
+  height: 100%;
+  width: auto;
+}
+
+img.portrait {
+  height: 100%;
+  width: auto;
+}
+
+.arrow i {
+  /*display: inline-block;*/
+  /*font-size: 150%;*/
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.img-display i {
+  font-size: 150%;
+  transition: color 0.2s;
+}
+
+.img-display i:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.img-display .ion-close-circled {
+  position: absolute;
+  right: 10%;
+}
+
 
 
 /* ----------------------------------------------------------- */

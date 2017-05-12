@@ -5,7 +5,7 @@ class Overlay extends Component {
     return (
       <div id='overlay'>
         <div id='popup-window'>
-          <div className='display'>
+          <div className='display animated fadeIn'>
             { this.props.children }
           </div>
         </div>

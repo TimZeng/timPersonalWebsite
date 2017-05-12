@@ -2,9 +2,19 @@ import React from 'react';
 
 import WorkCard from './workCard';
 
-const Work = () => {
-  const onClick = (text) => {
-    console.log(text, 'is clicked');
+const Work = ({ toggleOverlay }) => {
+  const onClick = (key) => {
+    const indexes = {
+      madsweepers: 0,
+      tagme: 3,
+      oneupeldercare: 6,
+      peonygarden: 8,
+    };
+
+    const index = indexes[key] || 0;
+
+    console.log(key, 'is clicked');
+    toggleOverlay(true, 'ImgDisplay', index);
   };
 
   return (

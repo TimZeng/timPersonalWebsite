@@ -5,7 +5,7 @@ import About from './about';
 import Skill from './skill';
 import Work from './work';
 
-const Home = () => (
+const Home = ({ toggleOverlay }) => (
   <div>
     <Header
       text1='TIM ZENG'
@@ -14,7 +14,9 @@ const Home = () => (
 
     <About />
     <Skill />
-    <Work />
+    <Work
+      toggleOverlay={toggleOverlay}
+    />
   </div>
 );
 
