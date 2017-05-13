@@ -13,7 +13,6 @@ class Contact extends Component {
 
   submit(event) {
     event.preventDefault();
-    console.log('submitting!!');
     this.props.changeProcessing(true);
     this.props.sendMessage(this.props.message);
   }

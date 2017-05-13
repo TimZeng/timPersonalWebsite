@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const parser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -11,6 +12,8 @@ const send = require('gmail-send')({
   // subject: 'customer message',
   // text:    'test message'   // Plain text
 });
+
+app.use(parser.json());
 
 app.use((req, res, next) => {
   console.log(`serving ${req.method} request on ${req.url}`);
