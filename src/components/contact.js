@@ -48,8 +48,8 @@ class Contact extends Component {
                       name="name"
                       className="form-control"
                       placeholder="your name *"
+                      value={this.props.message.name}
                       required
-                      data-error="Name is required."
                     />
                     <div className="help-block with-errors" />
                   </div>
@@ -70,8 +70,8 @@ class Contact extends Component {
                       name="email"
                       className="form-control"
                       placeholder="emial address *"
+                      value={this.props.message.email}
                       required
-                      data-error="Email is required."
                     />
                     <div className="help-block with-errors" />
                   </div>
@@ -94,8 +94,8 @@ class Contact extends Component {
                       className="form-control"
                       placeholder="Leave a message ..."
                       rows="4"
+                      value={this.props.message.message}
                       required
-                      data-error="Please,leave a message."
                     />
                     <div className="help-block with-errors" />
                   </div>
