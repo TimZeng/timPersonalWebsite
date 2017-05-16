@@ -356,7 +356,7 @@ header {
 
 .hero-text-box h1:after {
   display: block;
-  height: 1px;
+  height: 2.5px;
   background-color: var(--light-theme);
   content: " ";
   width: 180px;
@@ -542,6 +542,7 @@ img.work-small-view:hover {
   padding: 50px 60px;
   background-color: #fff;
   border-radius: 5px;
+  min-height: 480px;
 }
 
 .section-contact h2:after {
@@ -636,7 +637,7 @@ textarea {
 }
 
 .display {
-  height: 80%;
+  height: 100%;
   width: auto;
   display: block;
   margin-left: auto;
@@ -656,8 +657,13 @@ textarea {
 
 .display section {
   margin: 0 auto;
-  height: 100%;
+  height: 80%;
+  min-height: 580px;
   width: 60%;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .display .img-display {
