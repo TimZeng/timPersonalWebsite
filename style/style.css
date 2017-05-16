@@ -407,7 +407,8 @@ i.message:hover {
 }
 
 .section-skill h2:after {
-  background-color: var(--theme-3);
+  /*background-color: var(--theme-3);*/
+  background-color: var(--light-theme);
 }
 
 .section-skill .techChart {
@@ -415,6 +416,10 @@ i.message:hover {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.section-skill .techChart p {
+  margin-top: 10px;
 }
 
 .section-skill .charts {
@@ -457,6 +462,25 @@ ul.tech-list {
   margin: 10px 8px;
 }
 
+
+.donutchart-track{
+  fill: transparent;
+  stroke: #eee;
+}
+.donutchart-indicator {
+  fill: transparent;
+  /*stroke: var(--theme-3);*/
+  stroke: var(--light-theme);
+  stroke-dasharray: 0 10000;
+  transition: stroke-dasharray .8s ease;
+}
+
+.donutchart {
+  margin: 0 auto;
+  border-radius: 50%;
+  display: block;
+}
+
 /* ----------------------------------------------------------- */
 /* Works */
 /* ----------------------------------------------------------- */
@@ -466,7 +490,7 @@ ul.tech-list {
 }
 
 .section-work h2:after {
-  background-color: var(--theme-4);
+  background-color: var(--theme-2);
 }
 
 .work-display {
@@ -567,9 +591,24 @@ textarea {
   transition: background-color 0.2s;
 }
 
-.btn-success:hover {
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
   cursor: pointer;
   background-color: var(--darker-light-theme);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+}
+
+.contact-complete-message {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-complete-message i {
+  font-size: 500%;
+  color: var(--light-theme);
 }
 
 

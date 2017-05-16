@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Waypoint from 'react-waypoint';
 
 import TechPieChart from './pieChart';
+import TooltipImg from './common_components/tooltipImg';
+import DonutChart from './common_components/donutChart';
 
 class Skill extends Component {
   state = {
@@ -13,13 +15,25 @@ class Skill extends Component {
     NodeJS: 0
   };
 
+  // componentDidMount() {
+  //   console.log(this.refs.a);
+  //   // this.refs.a.tooltip();
+  //   $(this.refs.a.getDOMNode()).tooltip();
+
+  //   // $(ReactDom.findDOMNode(this.refs.a)).tooltip({
+  //   //   animated: 'fade',
+  //   //   placement: 'top',
+  //   //   html: true
+  //   // });
+  // }
+
   handleWaypointEnter() {
     this.setState({
       animated: true,
-      Javascript: 7,
-      ReactJS: 7,
-      HTMLCSS: 6,
-      NodeJS: 5
+      Javascript: 70,
+      ReactJS: 70,
+      HTMLCSS: 60,
+      NodeJS: 50
     });
   }
 
@@ -45,34 +59,34 @@ class Skill extends Component {
           </p>
 
           <div className='charts'>
-            <TechPieChart
+            <DonutChart
+              size={180}
+              strokewidth={45}
+              value={this.state.Javascript}
               title='JavaScript'
-              val={this.state.Javascript}
-              color='#e76270'
-              componentSize='180'
             />
 
-            <TechPieChart
+            <DonutChart
+              size={180}
+              strokewidth={45}
+              value={this.state.ReactJS}
               title='ReactJS'
-              val={this.state.ReactJS}
-              color='#e76270'
-              componentSize='180'
             />
           </div>
 
           <div className='charts'>
-            <TechPieChart
+            <DonutChart
+              size={180}
+              strokewidth={45}
+              value={this.state.HTMLCSS}
               title='HTML/CSS'
-              val={this.state.HTMLCSS}
-              color='#e76270'
-              componentSize='180'
             />
 
-            <TechPieChart
+            <DonutChart
+              size={180}
+              strokewidth={45}
+              value={this.state.NodeJS}
               title='NodeJS'
-              val={this.state.NodeJS}
-              color='#e76270'
-              componentSize='180'
             />
           </div>
 
@@ -82,108 +96,121 @@ class Skill extends Component {
 
           <ul className='tech-list'>
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/ES6.jpg'
-                alt='ES6'
+                id='ES6'
+                label='ECMAScript 6 (ES6)'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/redux.png'
-                alt='Redux'
+                id='Redux'
+                label='Redux'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/react-native.png'
-                alt='ReactNative'
+                id='ReactNative'
+                label='ReactNative'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/webpack.png'
-                alt='Webpack'
+                id='Webpack'
+                label='Webpack'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/angularjs.png'
-                alt='AngularJS'
+                id='AngularJS'
+                label='AngularJS'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/google_developers.png'
-                alt='Google Developers'
+                id='Google-Developers'
+                label='Google Developers'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/jquery.png'
-                alt='jQuery'
+                id='jQuery'
+                label='jQuery'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/socket-io.gif'
-                alt='Socketio'
+                id='Socket.io'
+                label='Socket.io'
               />
             </li>
           </ul>
 
           <ul className='tech-list'>
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/MongoDB.png'
-                alt='MongoDB'
+                id='MongoDB'
+                label='MongoDB'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/MySQL.png'
-                alt='MySQL'
+                id='MySQL'
+                label='MySQL'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/docker.png'
-                alt='Docker'
+                id='Docker'
+                label='Docker'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/AWS.png'
-                alt='Amazon Web Services'
+                id='AWS'
+                label='Amazon Web Services'
               />
             </li>
 
             <li>
-              <img
+              <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/heroku.png'
-                alt='Heroku'
+                id='Heroku'
+                label='Heroku'
               />
             </li>
           </ul>
