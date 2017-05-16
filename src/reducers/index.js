@@ -5,6 +5,7 @@ import CurrentProjectReducer from './CurrentProjectReducer';
 import ShowOverlayReducer from './ShowOverlayReducer';
 import OverlayComponentReducer from './OverlayComponentReducer';
 import MessageReducer from './MessageReducer';
+import MessageStatusReducer from './MessageStatusReducer';
 import ProcessingReducer from './ProcessingReducer';
 
 const rootReducer = combineReducers({
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   showOverlay: ShowOverlayReducer,
   overlayComponent: OverlayComponentReducer,
   message: MessageReducer,
+  messageStatus: MessageStatusReducer,
   processing: ProcessingReducer
 });
 
