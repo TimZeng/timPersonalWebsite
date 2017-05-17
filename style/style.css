@@ -544,9 +544,9 @@ img.work-small-view:hover {
   padding: 50px 60px;
   background-color: #fff;
   border-radius: 5px;
-  min-height: 480px;
+/*  min-height: 480px;
 
-  min-width: 450px;
+  min-width: 450px;*/
 }
 
 .section-contact h2:after {

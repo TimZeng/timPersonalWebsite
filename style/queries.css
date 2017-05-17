@@ -43,8 +43,12 @@
   .display .img-display { margin: 20% auto; }
 
   .section-contact { padding: 30px 40px; }
+  .display section {
+    width: 100%;
+    height: 100%;
+  }
 
-  .section-contact ul.social-links { display: none; }
+  /*.section-contact ul.social-links { display: none; }*/
 
   .row {
     /*background-color: green;*/
