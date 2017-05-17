@@ -12,6 +12,21 @@ class Nav extends Component {
     }, 1000);
   }
 
+  handleMobileNavClick() {
+    const nav = $('.js--main-nav');
+    const icon = $('.js--nav-icon i');
+
+    nav.slideToggle(200);
+
+    if (icon.hasClass('ion-navicon-round')) {
+      icon.addClass('ion-close-round');
+      icon.removeClass('ion-navicon-round');
+    } else {
+      icon.removeClass('ion-close-round');
+      icon.addClass('ion-navicon-round');
+    }
+  }
+
   render() {
     return (
       <nav>
@@ -27,6 +42,13 @@ class Nav extends Component {
               }
             >Contact</li>
           </ul>
+
+          <a
+            className="mobile-nav-icon js--nav-icon"
+            onClick={() => this.handleMobileNavClick()}
+          >
+            <i className="ion-navicon-round" />
+          </a>
 
           <ul className="social-links">
             <li>

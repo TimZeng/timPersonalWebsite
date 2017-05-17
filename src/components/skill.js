@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Waypoint from 'react-waypoint';
 
-import TechPieChart from './pieChart';
 import TooltipImg from './common_components/tooltipImg';
 import DonutChart from './common_components/donutChart';
 
@@ -14,18 +13,6 @@ class Skill extends Component {
     HTMLCSS: 0,
     NodeJS: 0
   };
-
-  // componentDidMount() {
-  //   console.log(this.refs.a);
-  //   // this.refs.a.tooltip();
-  //   $(this.refs.a.getDOMNode()).tooltip();
-
-  //   // $(ReactDom.findDOMNode(this.refs.a)).tooltip({
-  //   //   animated: 'fade',
-  //   //   placement: 'top',
-  //   //   html: true
-  //   // });
-  // }
 
   handleWaypointEnter() {
     this.setState({

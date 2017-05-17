@@ -203,20 +203,25 @@ h2:after {
   border-radius: 33px;
   float: left;
   margin: 5px 10px;
+
+  display: none;
 }
 
 /* Main Nav */
 
 nav {
   margin-bottom: -76px;
+  height: 76px;
 }
 
 .main-nav {
   list-style: none;
-  margin: 0 auto;
+  margin: 16px auto;
   background-color: transparent;
   z-index: 10;
 
+  text-align: center;
+  width: 100%;
 }
 
 .main-nav li {
@@ -248,9 +253,10 @@ nav {
 
 .mobile-nav-icon {
   float: right;
-  margin-top: 30px;
+  margin-top: 10px;
   cursor: pointer;
   display: none;
+  z-index: 10;
 }
 
 .mobile-nav-icon i {
@@ -269,35 +275,22 @@ nav {
   z-index: 10;
 }
 
-#contact,
-#contact-2 {
-  border-radius: 3px;
-  transition: background-color 0.2s, border 0.2s, color 0.2s;
-  color: #fff;
-  background-color: var(--main-theme);
-  padding-left: 8px;
-  padding-right: 8px;
-
+.sticky .main-nav {
+  width: auto;
 }
 
-#contact-2 {
-  max-width: 340px;
-  width: 70%;
-  margin: 0 auto;
-  padding: 8px 0;
-  color: #fff;
+.sticky .logo,
+.sticky .social-links {
+  display: inline-block;
 }
 
-#contact:hover,
-#contact-2:hover {
-  cursor: pointer;
-  background-color: var(--dark-orange);
-  border-color: var(--dark-orange);
-}
+/* Social Links */
 
-nav.social-links {
+nav .social-links {
   margin-right: 10px;
   margin-left: 10px;
+
+  display: none;
 }
 
 .social-links li a:link,
@@ -543,6 +536,8 @@ img.work-small-view:hover {
   background-color: #fff;
   border-radius: 5px;
   min-height: 480px;
+
+  min-width: 450px;
 }
 
 .section-contact h2:after {
@@ -676,9 +671,6 @@ textarea {
 /* Image Display */
 /* ----------------------------------------------------------- */
 
-.img-display {
-}
-
 .img-container {
   display: flex;
   justify-content: space-between;
@@ -694,9 +686,12 @@ textarea {
 }
 
 img.work-large-view {
-  display: inline-block;
-  height: 100%;
-  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-height: 100%;
+  max-width: 100%;
 }
 
 img.work-large-view:hover {
@@ -746,6 +741,7 @@ footer {
   margin-top: 14px;
   list-style: none;
   float: right;
+
 }
 
 footer .social-links {

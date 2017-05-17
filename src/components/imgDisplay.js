@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 
 import { toggleOverlay } from '../actions';
 
-// } = ({ img, clickLeft, clickRight, toggleOverlay }) =>
-
 class ImgDisplay extends Component {
   state = {
     index: 0,

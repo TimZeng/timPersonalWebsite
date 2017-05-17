@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { toggleOverlay } from '../actions';
-
 import $ from 'jquery';
 import Waypoint from 'react-waypoint';
+
+import { toggleOverlay } from '../actions';
 
 class About extends Component {
   state = { animated: false };
