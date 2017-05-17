@@ -81,126 +81,114 @@ class Skill extends Component {
 
           { this.renderWaypoint() }
 
-          <ul className='tech-list'>
-            <li>
+          <div className='tech-list'>
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/ES6.jpg'
                 id='ES6'
                 label='ECMAScript 6 (ES6)'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/redux.png'
                 id='Redux'
                 label='Redux'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/react-native.png'
                 id='ReactNative'
                 label='ReactNative'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/webpack.png'
                 id='Webpack'
                 label='Webpack'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/angularjs.png'
                 id='AngularJS'
                 label='AngularJS'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/google_developers.png'
                 id='Google-Developers'
                 label='Google Developers'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/jquery.png'
                 id='jQuery'
                 label='jQuery'
               />
-            </li>
 
-            <li>
+
+
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/socket-io.gif'
                 id='Socket.io'
                 label='Socket.io'
               />
-            </li>
-          </ul>
 
-          <ul className='tech-list'>
-            <li>
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/MongoDB.png'
                 id='MongoDB'
                 label='MongoDB'
               />
-            </li>
 
-            <li>
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/MySQL.png'
                 id='MySQL'
                 label='MySQL'
               />
-            </li>
 
-            <li>
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/docker.png'
                 id='Docker'
                 label='Docker'
               />
-            </li>
 
-            <li>
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/AWS.png'
                 id='AWS'
                 label='Amazon Web Services'
               />
-            </li>
 
-            <li>
               <TooltipImg
                 className='tech-icon'
                 src='../../Assets/img/tech-icons/heroku.png'
                 id='Heroku'
                 label='Heroku'
               />
-            </li>
-          </ul>
+
+          </div>
 
         </div>
 
