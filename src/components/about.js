@@ -59,7 +59,6 @@ class About extends Component {
               Paying attention to details helped me learn new things and solve problems.
             </p>
           </div>
-
         </div>
 
         <div className="row">

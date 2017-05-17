@@ -47,15 +47,15 @@ class Skill extends Component {
 
           <div className='charts'>
             <DonutChart
-              size={180}
-              strokewidth={45}
+              size={150}
+              strokewidth={30}
               value={this.state.Javascript}
               title='JavaScript'
             />
 
             <DonutChart
-              size={180}
-              strokewidth={45}
+              size={150}
+              strokewidth={30}
               value={this.state.ReactJS}
               title='ReactJS'
             />
@@ -63,15 +63,15 @@ class Skill extends Component {
 
           <div className='charts'>
             <DonutChart
-              size={180}
-              strokewidth={45}
+              size={150}
+              strokewidth={30}
               value={this.state.HTMLCSS}
               title='HTML/CSS'
             />
 
             <DonutChart
-              size={180}
-              strokewidth={45}
+              size={150}
+              strokewidth={30}
               value={this.state.NodeJS}
               title='NodeJS'
             />

@@ -46,9 +46,21 @@
 
   .section-contact ul.social-links { display: none; }
 
-  .col {
-    width: 100vw;
-    margin: 0 0 4% 0;
+  .row {
+    /*background-color: green;*/
+    padding: 0 4%;
+  }
+
+  .section-about .row {
+    display: block;
+  }
+
+  div.col,
+  .col:first-child {
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin: 0 15% 0 15%;
   }
 }
 
