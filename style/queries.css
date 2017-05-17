@@ -43,12 +43,7 @@
   .display .img-display { margin: 20% auto; }
 
   .section-contact { padding: 30px 40px; }
-  .display section {
-    width: 100%;
-    height: 100%;
-  }
 
-  /*.section-contact ul.social-links { display: none; }*/
 
   .row {
     /*background-color: green;*/
@@ -83,6 +78,15 @@
   .img-container { max-height: 55%; }
 
   .display .img-display { margin: 30% auto; }
+
+  .section-contact { padding: 20px 15px; }
+  .display section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-contact ul.social-links { display: none; }
+
 }
 
 @media only screen and (max-width: 500px) {
