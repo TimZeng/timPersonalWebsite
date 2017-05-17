@@ -400,7 +400,6 @@ i.message:hover {
 }
 
 .section-skill h2:after {
-  /*background-color: var(--theme-3);*/
   background-color: var(--light-theme);
 }
 
@@ -439,17 +438,17 @@ i.message:hover {
   font-weight: 500;
 }
 
-ul.tech-list {
-  min-width: 500px;
-  width: 50%;
+div.tech-list {
+  width: 85%;
   margin: 0 auto;
+}
 
-  display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+.tech-list div {
+  display: inline-block;
 }
 
 .tech-list .tech-icon {
+  display: inline-block;
   height: 40px;
   width: auto;
   margin: 10px 8px;
@@ -462,7 +461,6 @@ ul.tech-list {
 }
 .donutchart-indicator {
   fill: transparent;
-  /*stroke: var(--theme-3);*/
   stroke: var(--light-theme);
   stroke-dasharray: 0 10000;
   transition: stroke-dasharray .8s ease;

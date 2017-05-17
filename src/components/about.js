@@ -33,34 +33,36 @@ class About extends Component {
           <p className="long-copy">
             I like building awesome software. I've built websites, iOS mobile apps, and even games!<br />At work, I always have:
           </p>
+        </div>
 
-          <div className="row js--wp-1">
-            <div className="col span-1-of-3 box">
-              <i className="ion-ios-lightbulb-outline icon-big" />
-              <h3>Autonomy</h3>
-              <p>
-                Took ownership of the product and constantly sought for improvements.
-              </p>
-            </div>
-
-            <div className="col span-1-of-3 box">
-              <i className="ion-ios-people-outline icon-big" />
-              <h3>Team Work</h3>
-              <p>
-                Good communication with TEAM members as Together Everyone Achieves More.
-              </p>
-            </div>
-
-            <div className="col span-1-of-3 box">
-              <i className="ion-ios-list-outline icon-big" />
-              <h3>Detail Orientation</h3>
-              <p>
-                Paying attention to details helped me learn new things and solve problems.
-              </p>
-            </div>
-
+        <div className="row js--wp-1">
+          <div className="col span-1-of-3 box">
+            <i className="ion-ios-lightbulb-outline icon-big" />
+            <h3>Autonomy</h3>
+            <p>
+              Took ownership of the product and constantly sought for improvements.
+            </p>
           </div>
 
+          <div className="col span-1-of-3 box">
+            <i className="ion-ios-people-outline icon-big" />
+            <h3>Team Work</h3>
+            <p>
+              Good communication with TEAM members as Together Everyone Achieves More.
+            </p>
+          </div>
+
+          <div className="col span-1-of-3 box">
+            <i className="ion-ios-list-outline icon-big" />
+            <h3>Detail Orientation</h3>
+            <p>
+              Paying attention to details helped me learn new things and solve problems.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="row">
           <p className="long-copy">
             When I am not working on my next project, I enjoy <br /><strong>traveling</strong>, watching <strong>movies</strong>, and playing <strong>video games</strong>
           </p>
