@@ -64,6 +64,7 @@
   }
 
   .section-skill .charts {
+    width: 100%;
     display: block;
   }
 
