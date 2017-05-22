@@ -61,12 +61,12 @@ class About extends Component {
           </div>
         </div>
 
+          { this.renderWaypoint() }
+
         <div className="row">
           <p className="long-copy">
             When I am not working on my next project, I enjoy <br /><strong>traveling</strong>, watching <strong>movies</strong>, and playing <strong>video games</strong>
           </p>
-
-          { this.renderWaypoint() }
 
           <p className="long-copy">
             Thinking about a new project idea or simply want to chat?<br />Send me a&nbsp;

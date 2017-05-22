@@ -2,7 +2,6 @@ import React from 'react';
 import { IndexRoute, Router, Route, browserHistory } from 'react-router';
 import App from './app';
 import Home from './home';
-// import Work from './work';
 import Learnings from './learnings';
 
 // basic setup of router.

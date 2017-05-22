@@ -79,7 +79,7 @@ div.react-d3-core__legend.legend {
 
 .row {
   max-width: 1140px;
-  margin: 0 auto; /*margin: top right bottom left*/
+  margin: 0 auto;
 }
 
 section {
@@ -100,7 +100,7 @@ ul {
 h1,
 h2,
 h3 {
-  font-weight: 300; /*decrease font weight, h1 is usually bold*/
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -109,12 +109,12 @@ h1 {
   margin-top: 0;
   margin-bottom: 20px;
   color: #fff;
-  font-size: 300%; /*use percentage here relative to html tag values*/
+  font-size: 300%;
   word-spacing: 3px;
 }
 
 h2 {
-  text-transform: uppercase; /*make all letters upper case*/
+  text-transform: uppercase;
   font-size: 180%;
   word-spacing: 3px;
   text-align: center;
@@ -127,29 +127,11 @@ h3 {
   font-size: 110%;
   margin-top: 15px;
   margin-bottom: 15px;
-  /*text-align: center;*/
 }
-
-/*h6 {
-  font-weight: 300;
-  letter-spacing: 1px;
-  padding: 5px auto;
-  text-align: center;
-}
-
-h6:after {
-  display: block;
-  height: 1px;
-  background-color: var(--main-theme);
-  content: " ";
-  width: 80px;
-  margin: 5px auto;
-}*/
 
 h2:after {
   display: block;
   height: 2px;
-  /*background-color: var(--theme-2);*/
   content: " ";
   width: 250px;
   margin: 0 auto;
@@ -176,7 +158,6 @@ h2:after {
 .icon-big {
   font-size: 300%;
   display: block;
-  /*color: var(--main-theme);*/
   margin-bottom: 10px;
 }
 
@@ -188,7 +169,6 @@ h2:after {
   font-size: 120%;
   margin-right: 10px;
 
-  /* secret to align text and icons*/
   margin-top: -5px;
   line-height: 120%;
   vertical-align: middle;
@@ -371,15 +351,15 @@ header {
 /* ----------------------------------------------------------- */
 
 .section-about {
-  background-color: var(--background);
+  background-color: #fff;
 }
 
 .section-about .icon-big {
-  color: var(--theme-2);
+  color: var(--light-theme);
 }
 
 .section-about h2:after {
-  background-color: var(--theme-2);
+  background-color: var(--light-theme);
 }
 
 .section-about a:link,
@@ -402,11 +382,11 @@ i.message:hover {
 /* ----------------------------------------------------------- */
 
 .section-skill {
-  background-color: #fff;
+  background-color: var(--background);
 }
 
 .section-skill h2:after {
-  background-color: var(--light-theme);
+  background-color: var(--theme-3);
 }
 
 .section-skill .techChart {
@@ -425,14 +405,8 @@ i.message:hover {
   width: 50%;
   margin: 0 auto;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 
-/*  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,11 +438,11 @@ div.tech-list {
 
 .donutchart-track{
   fill: transparent;
-  stroke: #eee;
+  stroke: #fff;
 }
 .donutchart-indicator {
   fill: transparent;
-  stroke: var(--light-theme);
+  stroke: var(--theme-3);
   stroke-dasharray: 0 10000;
   -webkit-transition: stroke-dasharray .8s ease;
   transition: stroke-dasharray .8s ease;
@@ -526,14 +500,14 @@ img.work-small-view:hover {
 
 .icon-link {
   margin-left: 5px;
-  color: var(--border-grey);
+  color: var(--background);
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
-  font-size: 120%;
+  font-size: 150%;
 }
 
 .icon-link:hover {
-  color: var(--light-theme);
+  color: var(--theme-2);
 }
 
 /* ----------------------------------------------------------- */
@@ -544,9 +518,6 @@ img.work-small-view:hover {
   padding: 50px 60px;
   background-color: #fff;
   border-radius: 5px;
-/*  min-height: 480px;
-
-  min-width: 450px;*/
 }
 
 .section-contact h2:after {
@@ -751,7 +722,6 @@ img.work-large-view:hover {
 footer {
   background-color: var(--footer-color);
   color: white;
-  /*padding: 25px;*/
   font-size: 80%;
   height: 70px;
 }

@@ -11,7 +11,7 @@ import Processing from './processing';
 
 class App extends Component {
   redirect(pageTo) {
-    browserHistory.push('/' + pageTo);
+    browserHistory.push(`/${pageTo}`);
   }
 
   renderOverlay() {

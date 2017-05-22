@@ -71,7 +71,7 @@ class Contact extends Component {
                   type="text"
                   name="email"
                   className="form-control"
-                  placeholder="emial address *"
+                  placeholder="email address *"
                   value={this.props.message.email}
                   required
                 />

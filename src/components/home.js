@@ -12,8 +12,8 @@ const Home = ({ toggleOverlay }) => (
       text2='SOFTWARE ENGINEER'
     />
 
-    <About />
     <Skill />
+    <About />
     <Work
       toggleOverlay={toggleOverlay}
     />

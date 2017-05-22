@@ -33,8 +33,8 @@ class Nav extends Component {
         <div className='row'>
           <img src="../../Assets/img/head.jpeg" alt="TZ logo" className="logo" />
           <ul className="main-nav js--main-nav">
-            <li onClick={() => this.scrollTo('about')}>About</li>
             <li onClick={() => this.scrollTo('skill')}>Skills</li>
+            <li onClick={() => this.scrollTo('about')}>About</li>
             <li onClick={() => this.scrollTo('work')}>Works</li>
             <li
               onClick={
@@ -70,4 +70,3 @@ class Nav extends Component {
 }
 
 export default connect(null, { toggleOverlay })(Nav);
-            // <li onClick={() => this.props.redirect('learnings')}>Learnings</li>

@@ -15,4 +15,3 @@ class Overlay extends Component {
 }
 
 export default Overlay;
-          // <i className='ion-close-circled' />
