@@ -140,8 +140,7 @@ h2:after {
 
 /* ----- Paragraphs ----- */
 
-.long-copy,
-.brief-description {
+.long-copy {
   line-height: 145%;
   width: 70%;
   margin-left: 15%;

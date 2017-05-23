@@ -36,6 +36,7 @@ class Nav extends Component {
             <li onClick={() => this.scrollTo('skill')}>Skills</li>
             <li onClick={() => this.scrollTo('about')}>About</li>
             <li onClick={() => this.scrollTo('work')}>Works</li>
+            <li onClick={() => this.props.redirect('learnings')}>Learnings</li>
             <li
               onClick={
               () => this.props.toggleOverlay({ overlay: true, component: 'contact' })

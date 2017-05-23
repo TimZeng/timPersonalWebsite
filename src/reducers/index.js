@@ -8,6 +8,8 @@ import MessageReducer from './MessageReducer';
 import MessageStatusReducer from './MessageStatusReducer';
 import ProcessingReducer from './ProcessingReducer';
 
+import BlogReducer from './BlogReducer';
+
 const rootReducer = combineReducers({
   projectImg: ProjectImgReducer,
   currentProject: CurrentProjectReducer,
@@ -15,7 +17,8 @@ const rootReducer = combineReducers({
   overlayComponent: OverlayComponentReducer,
   message: MessageReducer,
   messageStatus: MessageStatusReducer,
-  processing: ProcessingReducer
+  processing: ProcessingReducer,
+  blog: BlogReducer
 });
 
 export default rootReducer;

@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 
+import $ from 'jquery';
+
+import BlogPage from './blogPage';
 
 class Learnings extends Component {
+  componentWillMount() {
+    $('nav').addClass('sticky animated fadeInDown');
+  }
+
   render() {
     return (
-      <div>
-        <section className='section-learnings'>
-          <h2>this is the learnigns page</h2>
-        </section>
-      </div>
+      <section className='section-learnings'>
+        <BlogPage />
+      </section>
     );
   }
 }
