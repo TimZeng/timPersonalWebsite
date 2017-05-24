@@ -11,11 +11,11 @@ class Learnings extends Component {
 
   render() {
     return (
-      <section className='section-learnings'>
         <BlogPage />
-      </section>
     );
   }
 }
 
 export default Learnings;
+      // <section className='section-learnings'>
+      // </section>

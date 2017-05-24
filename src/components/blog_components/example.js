@@ -1,13 +1,15 @@
 import React from 'react';
 
-const Example = ({ title, content }) => (
-  <div className='example'>
-    <p className='blog-p'>{title}</p>
+import { Paragraph } from './Paragraph';
 
-    <ul className='blog-list'>
-      {content.map(p => <p className='blog-p blog-list-item'>{p}</p>)}
-    </ul>
+const Example = ({ content }) => (
+  <div className='blog-example'>
+    <p className='paragraph blog-section-title'>For example:</p>
+
+    {content.map(p =>
+      <Paragraph content={p} />
+    )}
   </div>
 );
 
-export default Example;
+export { Example };

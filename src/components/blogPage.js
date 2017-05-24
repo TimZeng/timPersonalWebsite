@@ -1,38 +1,70 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { getBlog } from '../actions';
+
+import {
+  Title,
+  Paragraph,
+  Example,
+  Note,
+  Logic,
+  CodeBlock
+} from './blog_components';
+
 class BlogPost extends Component {
+  // componentWillMount() {
+  //   this.props.getBlog();
+  // }
+
+  renderTags(category, language, tags) {
+    return (
+      <p className='blog-p'>
+        <span className='blog-tag tag-category'>{category}</span>
+        <span className='blog-tag tag-language'>{language}</span>
+        {tags.map(tag => <span className='blog-tag tag-tag'>{tag}</span>)}
+      </p>
+    );
+  }
+
+  renderContent(content) {
+    return content.map(item => {
+      if (item.type === 'paragraph') {
+        return <Paragraph content={item.content} />;
+      } else if (item.type === 'example') {
+        return <Example content={item.content} />;
+      } else if (item.type === 'note') {
+        return <Note content={item.content} />;
+      } else if (item.type === 'logic') {
+        return <Logic content={item.content} />;
+      } else if (item.type === 'code') {
+        return <CodeBlock content={item.content} />;
+      }
+
+
+      return null;
+    });
+  }
+
   render() {
-    console.log(this.props.blog);
+    console.log('in blogPage, blog =>>', this.props.blog);
+
+    const { title, category, language, tags, time, content } = this.props.blog;
 
     return (
-      <div className='row'>
-        <h2>Linkedlist - Remove Nth Node From End</h2>
-        <p className="blog-p">
-          Given a linked list, remove the nth node from the end of list and return its head.
-        </p>
+      <section className='section-blogPage'>
+        <div className='row'>
+          <Title
+            title={title}
+            time={time}
+          />
 
-        <p className="blog-p">
-          For example:
-        </p>
+          {this.renderTags(category, language, tags)}
 
-        <p className="blog-p">
-          Given linked list: <code>1->2->3->4->5</code>, and <code>n = 2</code>.
-        </p>
+          {this.renderContent(content)}
 
-        <p className='blog-p'>
-          After removing the second node from the end, the linked list becomes <code>1->2->3->5</code>.
-        </p>
-        <p className='blog-p'>
-          <span>Note:</span>
-        </p>
-        <p className='blog-p'>
-          Given n will always be valid.
-        </p>
-        <p className='blog-p'>
-          Try to do this in one pass.
-        </p>
-      </div>
+        </div>
+      </section>
     );
   }
 }
@@ -41,4 +73,4 @@ const mapStateToProps = ({ blog }) => (
   { blog }
 );
 
-export default connect(mapStateToProps)(BlogPost);
+export default connect(mapStateToProps, { getBlog })(BlogPost);

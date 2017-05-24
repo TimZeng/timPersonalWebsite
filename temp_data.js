@@ -1,5 +1,4 @@
-[
-  {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
+exports.blog = {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
   "time": "May-22-2017",
   "language": "JavaScript",
   "category": "Algorithm",
@@ -8,7 +7,7 @@
       {
         "type": "paragraph",
         "content": [
-          {"type": "text", "content":"Given a linked list, remove the nth node from the end of list and return its head"}
+          {"type": "text", "content":"Given a linked list, remove the nth node from the end of list and return its head."}
         ]
       },
       {
@@ -32,10 +31,10 @@
           [
             {"type": "text", "content": "Given "},
             {"type": "code", "content": "n"},
-            {"type": "text", "content": " will always be valid"}
+            {"type": "text", "content": " will always be valid."}
           ],
           [
-            {"type": "text", "content": "Try to do this in one pass"}
+            {"type": "text", "content": "Try to do this in one pass."}
           ]
         ]
       },
@@ -150,5 +149,4 @@
         ]
       }
     ]
-  }
-]
+  };

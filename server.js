@@ -13,6 +13,8 @@ const send = require('gmail-send')({
   // text:    'test message'   // Plain text
 });
 
+const blog = require('./temp_data');
+
 app.use(parser.json());
 
 app.use((req, res, next) => {
@@ -22,23 +24,28 @@ app.use((req, res, next) => {
 
 app.use(express.static(__dirname));
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.post('/message', (req, resp) => {
-  console.log(req.body);
+app.post('/message', (req, res) => {
   const text = `name: ${req.body.name} \n email: ${req.body.email} \n ${req.body.message}`;
 
   send({
     subject: `Your website message from ${req.body.name}`,
     text
-  }, (err, res) => {
+  }, (err, resp) => {
     if (err) console.log('err: ', err);
     else {
-      resp.send('success');
+      res.status(200);
+      res.send('success');
     }
   });
+});
+
+app.get('/blog', (req, res) => {
+  res.status(200);
+  res.send(JSON.stringify(blog));
 });
 
 app.listen(port, () => {

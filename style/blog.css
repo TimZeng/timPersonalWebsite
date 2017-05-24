@@ -1,27 +1,102 @@
-.section-learnings {
+:root {
+  --main-theme: #0d2c5a;
+  --light-theme: #5b9bbc;
+  --darker-light-theme: #5490af;
+  --background: #eee;
+  --theme-2: #f08b65;
+  --theme-3: #e76270;
+  --theme-4: #ccc;
+}
+
+.section-blogPage {
   line-height: 145%;
-  /*width: 70%;*/
   width: 700px;
   display: block;
   margin: 0 auto;
-/*  margin-left: 15%;
-  text-align: left;
-  padding-left: 10%;
-  padding-right: 10%;*/
 }
 
-.section-learnings div {
+.section-blogPage div {
   display: block;
+  margin: 0;
 }
 
-.blog-p {
+h2.blog-title {
+  letter-spacing: -2px;
+  word-spacing: 1px;
+  font-weight: 400;
+  font-size: 220%;
+  text-transform: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 0;
 }
 
-.example {
-
+h3.blog-time {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 100px;
+  font-size: 85%;
+  color: #999;
 }
 
-code {
+.blog-section-title {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.blog-tag {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: inline-block;
+  color: #fff;
+  padding: 3px 15px;
+  border-radius: 19px;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  font-size: 70%;
+}
+
+.tag-category {
+  background-color: var(--theme-3);
+}
+
+.tag-language {
+  background-color: var(--theme-2);
+}
+
+.tag-tag {
+  background-color: var(--light-theme);
+}
+
+.paragraph {
+  font-family: 'freight-text-pro', serif;
+}
+
+div.blog-example,
+div.blog-logics {
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.blog-example {
+  border-left: 5px solid var(--light-theme);
+}
+
+.blog-logics {
+  border-left: 5px solid var(--theme-3);
+}
+
+.blog-note {
+  font-style: italic;
+  line-height: 120%;
+}
+
+.blog-note p {
+  margin-bottom: 10px;
+}
+
+/*code,*/
+.code {
   font-size: 0.8em;
   color: #cc2255;
   padding: 1px 3px;
@@ -29,7 +104,48 @@ code {
   font-size: 0.9em;
   white-space: pre-wrap;
   background: #f0f0f0;
+}
 
-  margin-left: 5px;
-  /*margin-right: 5px;*/
+.strong {
+  font-weight: bold;
+}
+
+/*****************************************************/
+
+.blog-code-block {
+  background-color: #272822;
+  color: #fff;
+  padding: 15px;
+  font-size: 80%;
+  border-radius: 15px;
+}
+
+p.code-line {
+  margin: 0;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+span.blue {
+  color: #66d9ef;
+}
+
+span.red {
+  color: #e2465d;
+}
+
+span.green {
+  color: #6ded50;
+}
+
+span.purple {
+  color: #b984ff;
+}
+
+span.pseudo {
+  color: #707070;
 }
