@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getBlog = (id) => {
-  const url = `/blog?blogID=${id}`;
+  const url = `http://localhost:8000/blog?blogID=${id}`;
   return (dispatch) => {
     axios.get(url)
       .then(res => {
@@ -15,7 +15,7 @@ export const getBlog = (id) => {
 
 export const getBlogList = () =>
   (dispatch) => {
-    axios.get('/blogList')
+    axios.get('http://localhost:8000/blogList')
       .then(res => {
         dispatch({ type: 'BLOG_LIST_RECEIVE', payload: res.data.blogList });
       })

@@ -3,6 +3,7 @@ exports.blog = {"title": "Linkedlist - Remove Node From End",
   "language": "JavaScript",
   "category": "Algorithm",
   "tags": ["Linkedlist","Traverse"],
+  "description": "Remove the Nth node from the end of a linkedlist",
   "content": [
       {
         "type": "paragraph",

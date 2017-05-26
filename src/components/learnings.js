@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import $ from 'jquery';
 
 import {
+  BlogListItem
+} from './blog_components';
+
+import {
   getBlog,
   getBlogList,
   changeProcessing
@@ -10,7 +14,7 @@ import {
 
 class Learnings extends Component {
   componentWillMount() {
-    $('nav').addClass('sticky animated fadeInDown');
+    $('nav').addClass('hidden');
 
     if (this.props.blogList.length === 0) {
       this.props.changeProcessing(true);
@@ -27,23 +31,23 @@ class Learnings extends Component {
     this.props.redirect('blog');
   }
 
+  renderBlogList() {
+    return this.props.blogList.map(item => (
+      <BlogListItem
+        item={item}
+        fetchBlog={this.fetchBlog.bind(this)}
+      />
+    ));
+  }
+
   render() {
     return (
       <section className='section-learnings'>
-        <div className='row'>
+        <div className='row blog-list'>
           <h2>This is the learnings page</h2>
 
-          <h3
-            onClick={() => this.fetchBlog(1)}
-          >
-            Linkedlist - Remove Node From End
-          </h3>
+          {this.renderBlogList()}
 
-          <h3
-            onClick={() => this.fetchBlog(2)}
-          >
-            Array - Next Permutation
-          </h3>
         </div>
         {this.props.blogReady ? this.openBlogPage() : null}
       </section>

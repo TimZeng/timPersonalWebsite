@@ -3,6 +3,7 @@ exports.blog = {"title": "Array - Next Permutation",
   "language": "JavaScript",
   "category": "Algorithm",
   "tags": ["Array","Permutation"],
+  "description": "Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers",
   "content": [
       {
         "type": "paragraph",

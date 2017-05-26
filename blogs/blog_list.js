@@ -5,7 +5,8 @@ exports.blogList = [
     "time": "May-22-2017",
     "language": "JavaScript",
     "category": "Algorithm",
-    "tags": ["Linkedlist", "Traverse"]
+    "tags": ["Linkedlist", "Traverse"],
+    "description": "Remove the Nth node from the end of a linkedlist"
   },
   {
     "id": "2",
@@ -13,6 +14,25 @@ exports.blogList = [
     "time": "May-25-2017",
     "language": "JavaScript",
     "category": "Algorithm",
-    "tags": ["Array","Permutation"]
+    "tags": ["Array","Permutation"],
+    "description": "Rearranges numbers into the lexicographically next greater permutation of numbers"
+  },
+  {
+    "id": "3",
+    "title": "Binary Tree - Same Tree",
+    "time": "May-25-2017",
+    "language": "JavaScript",
+    "category": "Algorithm",
+    "tags": ["Binary Tree","Equality"],
+    "description": "Given two binary trees, check if they are equal or not"
+  },
+  {
+    "id": "4",
+    "title": "Matrix - Minimum Path Sum",
+    "time": "May-25-2017",
+    "language": "JavaScript",
+    "category": "Algorithm",
+    "tags": ["Matrix"],
+    "description": "A m x n matrix, find a path which minimizes the sum of all numbers along the way"
   }
 ];

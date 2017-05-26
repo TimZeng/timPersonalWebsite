@@ -36,7 +36,7 @@ class BlogPage extends Component {
       } else if (item.type === 'note') {
         return <Note content={item.content} />;
       } else if (item.type === 'logic') {
-        return <Logic content={item.content} />;
+        return <Logic title={item.title || 'Approach:'} content={item.content} />;
       } else if (item.type === 'code') {
         return <CodeBlock content={item.content} functions={item.functions} />;
       }

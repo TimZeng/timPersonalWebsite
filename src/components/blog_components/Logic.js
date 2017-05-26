@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Paragraph } from './Paragraph';
 
-const Logic = ({ content }) => (
+const Logic = ({ title, content }) => (
   <div className='blog-logics'>
-    <p className='paragraph blog-section-title'>Approach:</p>
+    <p className='paragraph blog-section-title'>{title}</p>
 
     {content.map(p =>
       <Paragraph content={p} />
