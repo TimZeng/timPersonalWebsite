@@ -1,4 +1,4 @@
-exports.blog = {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
+exports.blog = {"title": "Linkedlist - Remove Node From End",
   "time": "May-22-2017",
   "language": "JavaScript",
   "category": "Algorithm",
@@ -7,7 +7,7 @@ exports.blog = {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
       {
         "type": "paragraph",
         "content": [
-          {"type": "text", "content":"Given a linked list, remove the nth node from the end of list and return its head."}
+          {"type": "text", "content":"Given a linked list, remove the nth node from the end of list and return its head"}
         ]
       },
       {
@@ -31,10 +31,10 @@ exports.blog = {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
           [
             {"type": "text", "content": "Given "},
             {"type": "code", "content": "n"},
-            {"type": "text", "content": " will always be valid."}
+            {"type": "text", "content": " will always be valid"}
           ],
           [
-            {"type": "text", "content": "Try to do this in one pass."}
+            {"type": "text", "content": "Try to do this in one pass"}
           ]
         ]
       },
@@ -52,6 +52,7 @@ exports.blog = {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
       },
       {
         "type": "code",
+        "functions": ["removeNthFromEnd ", "remove "],
         "content": [
           {
             "type":"code",
@@ -136,7 +137,7 @@ exports.blog = {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
           },
           {
             "type":"text",
-            "content":"  // return the second element, which is the head, from the recursion funciton"
+            "content":"  // return the second element, which is the head"
           },
           {
             "type":"code",

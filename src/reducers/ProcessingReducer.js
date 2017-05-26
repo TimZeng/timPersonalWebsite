@@ -6,6 +6,12 @@ export default (state = false, action) => {
     case 'MESSAGE_SENT':
       return false;
 
+    case 'BLOG_RECEIVE':
+      return false;
+
+    case 'BLOG_LIST_RECEIVE':
+      return false;
+
     default:
       return state;
   }

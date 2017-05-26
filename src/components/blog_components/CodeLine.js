@@ -1,20 +1,42 @@
 import React from 'react';
 
 const keys = {
-  var: 'blue',
+  'var ': 'blue',
   'const ': 'blue',
   function: 'blue',
   '=> ': 'blue',
+  'console': 'blue',
+  'log': 'blue',
   '= ': 'red',
+  '=': 'red',
+  '&': 'red',
+  '& ': 'red',
+  '< ': 'red',
+  '> ': 'red',
+  '<= ': 'red',
+  '>= ': 'red',
   '=== ': 'red',
   'if ': 'red',
   'return ': 'red',
+  'while ': 'red',
+  'for ': 'red',
+  'in ': 'red',
   'else ': 'red',
   '+ ': 'red',
+  '- ': 'red',
+  '+': 'red',
+  '-': 'red',
+  '* ': 'red',
+  '/ ': 'red',
+  '*': 'red',
+  '/': 'red',
+  '? ': 'red',
   '!': 'red',
   '.': 'red',
-  'removeNthFromEnd ': 'green',
-  'remove ': 'green',
+  // 'removeNthFromEnd ': 'green',
+  // 'nextPermutation ': 'green',
+  // 'remove ': 'green',
+  // 'swap ': 'green',
   0: 'purple',
   1: 'purple',
   2: 'purple',
@@ -28,9 +50,10 @@ const keys = {
   null: 'purple'
 };
 
-const CodeLine = ({ line }) => {
+const CodeLine = ({ line, functions }) => {
+  functions.forEach(func => { keys[func] = 'green'; });
+
   const renderLine = content => {
-    console.log(content);
     if (content.type === 'code') {
       return content.content.map(word => {
         const className = keys[word.trimLeft()] || 'text';

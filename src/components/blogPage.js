@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { getBlog } from '../actions';
+import { enterBlog } from '../actions';
 
 import {
   Title,
@@ -12,10 +12,10 @@ import {
   CodeBlock
 } from './blog_components';
 
-class BlogPost extends Component {
-  // componentWillMount() {
-  //   this.props.getBlog();
-  // }
+class BlogPage extends Component {
+  componentWillMount() {
+    this.props.enterBlog();
+  }
 
   renderTags(category, language, tags) {
     return (
@@ -38,7 +38,7 @@ class BlogPost extends Component {
       } else if (item.type === 'logic') {
         return <Logic content={item.content} />;
       } else if (item.type === 'code') {
-        return <CodeBlock content={item.content} />;
+        return <CodeBlock content={item.content} functions={item.functions} />;
       }
 
 
@@ -47,8 +47,6 @@ class BlogPost extends Component {
   }
 
   render() {
-    console.log('in blogPage, blog =>>', this.props.blog);
-
     const { title, category, language, tags, time, content } = this.props.blog;
 
     return (
@@ -69,8 +67,6 @@ class BlogPost extends Component {
   }
 }
 
-const mapStateToProps = ({ blog }) => (
-  { blog }
-);
+const mapStateToProps = ({ blog }) => ({ blog });
 
-export default connect(mapStateToProps, { getBlog })(BlogPost);
+export default connect(mapStateToProps, { enterBlog })(BlogPage);

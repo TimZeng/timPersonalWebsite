@@ -7,8 +7,9 @@ import OverlayComponentReducer from './OverlayComponentReducer';
 import MessageReducer from './MessageReducer';
 import MessageStatusReducer from './MessageStatusReducer';
 import ProcessingReducer from './ProcessingReducer';
-
+import BlogListReducer from './BlogListReducer';
 import BlogReducer from './BlogReducer';
+import BlogReadyReducer from './BlogReadyReducer';
 
 const rootReducer = combineReducers({
   projectImg: ProjectImgReducer,
@@ -18,7 +19,9 @@ const rootReducer = combineReducers({
   message: MessageReducer,
   messageStatus: MessageStatusReducer,
   processing: ProcessingReducer,
-  blog: BlogReducer
+  blogList: BlogListReducer,
+  blog: BlogReducer,
+  blogReady: BlogReadyReducer
 });
 
 export default rootReducer;

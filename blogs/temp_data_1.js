@@ -1,5 +1,4 @@
-[
-  {"title": "LINKEDLIST - REMOVE NTH NODE FROM END",
+exports.blog = {"title": "Linkedlist - Remove Node From End",
   "time": "May-22-2017",
   "language": "JavaScript",
   "category": "Algorithm",
@@ -53,6 +52,7 @@
       },
       {
         "type": "code",
+        "functions": ["removeNthFromEnd ", "remove "],
         "content": [
           {
             "type":"code",
@@ -137,7 +137,7 @@
           },
           {
             "type":"text",
-            "content":"  // return the second element, which is the head, from the recursion funciton"
+            "content":"  // return the second element, which is the head"
           },
           {
             "type":"code",
@@ -150,5 +150,4 @@
         ]
       }
     ]
-  }
-]
+  };

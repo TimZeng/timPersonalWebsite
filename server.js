@@ -2,18 +2,16 @@ const express = require('express');
 const path = require('path');
 const parser = require('body-parser');
 
+
+const blogger = require('./request_handlers/blog_request_handler');
+const messager = require('./request_handlers/message_request_handler');
+
+/******************************************************************
+  General Setup
+******************************************************************/
 const app = express();
 const port = process.env.PORT || 8000;
 
-const send = require('gmail-send')({
-  user: 'zengtiantian1122@gmail.com',
-  pass: 'metiwnzdwhnoqulo',
-  to: 'zengtiantian1122@gmail.com'
-  // subject: 'customer message',
-  // text:    'test message'   // Plain text
-});
-
-const blog = require('./temp_data');
 
 app.use(parser.json());
 
@@ -28,13 +26,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.post('/message', (req, res) => {
-  const text = `name: ${req.body.name} \n email: ${req.body.email} \n ${req.body.message}`;
+/******************************************************************
+  Message Section
+******************************************************************/
 
-  send({
-    subject: `Your website message from ${req.body.name}`,
-    text
-  }, (err, resp) => {
+app.post('/message', (req, res) => {
+  messager.sendMessage.sendOneMessage(req.body, (err, resp) => {
     if (err) console.log('err: ', err);
     else {
       res.status(200);
@@ -43,10 +40,35 @@ app.post('/message', (req, res) => {
   });
 });
 
-app.get('/blog', (req, res) => {
-  res.status(200);
-  res.send(JSON.stringify(blog));
+/******************************************************************
+  Blog Section
+******************************************************************/
+
+app.get('/blogList', (req, res) => {
+  blogger.getBlog.getBlogList((err, blogList) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.status(200);
+      res.send(JSON.stringify(blogList));
+    }
+  });
 });
+
+app.get('/blog', (req, res) => {
+  blogger.getBlog.getOneBlog(req.query.blogID, (err, blog) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.status(200);
+      res.send(JSON.stringify(blog));
+    }
+  });
+});
+
+/******************************************************************
+  Start Server
+******************************************************************/
 
 app.listen(port, () => {
   console.log(`server listening on ${port}`);
