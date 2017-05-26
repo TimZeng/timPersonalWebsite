@@ -72,6 +72,13 @@ app.get('/blog', (req, res) => {
   });
 });
 
+app.post('/blog', (req, res) => {
+  blogger.postBlog.saveBlog(req.body, () => {
+    res.status(200);
+    res.send('success');
+  });
+});
+
 /******************************************************************
   Start Server
 ******************************************************************/
